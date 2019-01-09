@@ -1,0 +1,39 @@
+// overwrite or common variables
+
+
+/*Import funtions from Bootstrap*/
+@import "../bootstrap/functions";
+
+
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$container-max-widths: map-merge(
+  (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1470px
+  ),
+  $container-max-widths
+);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+
+/* ========= Custom Defined Variables ================*/
+
+
+$primary  :   #ff0000;
+$black    :   #000;
+$blue     :   #007bff !default;
+$indigo   :   #6610f2 !default;
+$purple   :   #6f42c1 !default;
+$pink     :   #e83e8c !default;
+$red      :   #dc3545 !default;
+$orange   :   #fd7e14 !default;
+$yellow   :   #ffc107 !default;
+$green    :   #28a745 !default;
+$teal     :   #20c997 !default;
+$cyan     :   #17a2b8 !default;
+
