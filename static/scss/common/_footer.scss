@@ -23,6 +23,8 @@ footer{
           width: 1px;
           background-color: $white;
         }
+        &:hover{
+          text-decoration: underline;}
       }
       &:first-child{
         a{

@@ -1,3 +1,100 @@
 // Notes on the classes:
 
+#site-wrapper {
+  &.login {
+    color: $white;
+    height: 100vh;
+    background: url("../img/login/McKA-login-bg.png");
+    background-size: cover;
+    a {
+      color: $white;
+    }
 
+    header {
+      background: transparent;
+      border: none;
+      .language-selector {
+        border:0;
+        .dropdown {
+          button {
+            background: transparent;
+            color: $white;
+          }
+        }
+      }
+      i{ color: $white;}
+    }
+
+    main {
+      padding: 10% 0;
+      height: calc(100vh - 145px);
+      .heading {
+        display: block;
+        color: $white;
+        margin-bottom: 40px;
+        i{
+          font-size: inherit;
+          line-height: inherit;
+          vertical-align: middle;
+        }
+      }
+      form {
+        label {
+          color: $white;
+        }
+        .form-group {
+          margin-bottom: 5px;
+          input:not([type='checkbox']) {
+            max-width: 293px;
+            height: 50px;
+            font-size: 0.9rem;
+            border-radius: 0;
+            border: 1px solid $gray;
+            &:disabled {
+              border: 0;
+              opacity: 0.9;
+            }
+          }
+          small {
+            font-size: 90%;
+            color: $gray;
+          }
+          &.agreement {
+            label {
+              font-size: 0.9rem;
+              color: $black;
+              margin-left: 3px;
+            }
+          }
+        }
+      }
+    }
+
+    //  quick footer links for the login page
+    .quick-links {
+      text-align: center;
+      padding: 0;
+      margin: 40px 0;
+      overflow: hidden;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 15px;
+        color: $white;
+        a {
+          color: $white;
+          text-transform: capitalize;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    submit{ margin: 0 auto;}
+  }
+}
+
+.login-wrapper {
+
+}
