@@ -2,15 +2,38 @@
 body{
   font-size: $body-font;
   background-color: $ash-white;
+  font-family: 'open-sans', sans-serif;
 }
 a{
   color: $link-blue;
   &:hover{
     color: $link-blue;
+    text-decoration: underline !important;
   }
 }
 
-@mixin heading($size, $weight) {
-  font-size: $size;
-  font-weight: $weight;
+@mixin heading1() {
+  font-size: 42px;
+  font-weight: 300;
 }
+
+@mixin heading2() {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+@mixin heading3() {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+@mixin heading4() {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@mixin heading5() {
+  font-size: 12px;
+  font-weight: 300;
+}
+

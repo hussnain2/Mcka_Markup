@@ -1,5 +1,53 @@
 /*Import funtions from Bootstrap*/
 /* ========= Custom Defined Variables ================*/
+body {
+  font-size: 14px;
+  background-color: #f3f4f6;
+  font-family: 'open-sans', sans-serif; }
+
+a {
+  color: #2042cb; }
+  a:hover {
+    color: #2042cb;
+    text-decoration: underline !important; }
+
+button.btn {
+  font-weight: 600;
+  font-size: 12px;
+  height: 40px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  line-height: 1.83;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0 20px; }
+  button.btn.btn-lg {
+    font-size: 1rem;
+    height: 50px;
+    padding: 0 30px; }
+  button.btn.btn-primary {
+    background-color: #2042cb;
+    border-color: #2042cb; }
+    button.btn.btn-primary:hover {
+      background-color: #0b0886;
+      border-color: #0b0886; }
+  button.btn:active {
+    background-color: inherit; }
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: unset;
+  background-color: unset;
+  border-color: unset; }
+
+input {
+  font-size: 1rem; }
+  input:focus {
+    outline: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+
 header {
   border-bottom: 1px solid #c2c2c2;
   background-color: #ffffff; }
@@ -26,16 +74,12 @@ header {
 main {
   min-height: calc(100vh - 145px); }
 
-button.btn {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0; }
-
 footer {
   background-color: #232d39;
   font-size: 0.75rem;
   line-height: 60px;
-  height: 60px; }
+  height: 60px;
+  margin-top: 40px; }
   footer .copyright {
     color: #696969; }
   footer ul li a.nav-link {
@@ -53,15 +97,6 @@ footer {
       background-color: #ffffff; }
   footer ul li:first-child a:before {
     display: none; }
-
-body {
-  font-size: 14px;
-  background-color: #f3f4f6; }
-
-a {
-  color: #2042cb; }
-  a:hover {
-    color: #2042cb; }
 
 .form-check-label input[type="checkbox"] {
   position: absolute;
@@ -97,28 +132,47 @@ a {
 .form-check-label:hover input ~ .checkmark {
   background-color: #eeeeee; }
 
-.activation {
+.activation .form {
   background-color: #ffffff;
   border-top: 6px solid #002960;
   padding: 30px 50px;
   margin-top: 30px; }
-  .activation h4 {
+  .activation .form h4 {
     margin: 20px 0 20px; }
-  .activation .form-group {
+  .activation .form .form-group {
     margin-bottom: 5px; }
-    .activation .form-group input:not([type='checkbox']) {
+    .activation .form .form-group input:not([type='checkbox']) {
       max-width: 293px;
       height: 50px;
-      font-size: 0.9rem;
       border-radius: 0;
       border: 1px solid #696969; }
-      .activation .form-group input:not([type='checkbox']):disabled {
+      .activation .form .form-group input:not([type='checkbox']):disabled {
         border: 0;
         opacity: 0.9; }
-    .activation .form-group small {
+    .activation .form .form-group small {
       font-size: 90%;
       color: #696969; }
-    .activation .form-group.agreement label {
+    .activation .form .form-group.agreement label {
       font-size: 0.9rem;
       color: #000000;
       margin-left: 3px; }
+    .activation .form .form-group .password {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 293px; }
+      .activation .form .form-group .password .material-icons {
+        position: absolute;
+        right: 10px;
+        top: 14px;
+        color: #696969;
+        cursor: pointer; }
+        .activation .form .form-group .password .material-icons:hover {
+          color: #0b0886; }
+    .activation .form .form-group .checkmark {
+      top: 2px; }
+
+.activation .form-footer {
+  padding: 10px 35px; }
+  .activation .form-footer a {
+    font-weight: 400; }
