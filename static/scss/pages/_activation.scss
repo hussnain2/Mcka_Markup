@@ -1,36 +1,62 @@
 // Notes on the classes:
 
 .activation{
-  background-color: $white;
-  border-top: 6px solid $primary;
-  padding: 30px 50px;
-  margin-top: 30px;
-  h4{
-    margin: 20px 0 20px;
+  .form{
+    background-color: $white;
+    border-top: 6px solid $primary;
+    padding: 30px 50px;
+    margin-top: 30px;
+    h4{
+      margin: 20px 0 20px;
+    }
+    .form-group{
+      margin-bottom: 5px;
+      input:not([type='checkbox']){
+        max-width: 293px;
+        height: 50px;
+        border-radius: 0;
+        border: 1px solid $gray;
+        &:disabled{
+          border: 0;
+          opacity: 0.9;
+        }
+      }
+      small{
+        font-size: 90%;
+        color: $gray;
+      }
+      &.agreement{
+        label{
+          font-size: 0.9rem;
+          color: $black;
+          margin-left: 3px;
+        }
+      }
+      .password{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 293px;
+        .material-icons{
+          position: absolute;
+          right: 10px;
+          top: 14px;
+          color: $gray;
+          cursor: pointer;
+          &:hover{
+            color: $dark-blue;
+          }
+        }
+      }
+      .checkmark{
+        top: 2px;
+      }
+    }
   }
-  .form-group{
-    margin-bottom: 5px;
-    input:not([type='checkbox']){
-      max-width: 293px;
-      height: 50px;
-      font-size: 0.9rem;
-      border-radius: 0;
-      border: 1px solid $gray;
-      &:disabled{
-        border: 0;
-        opacity: 0.9;
-      }
-    }
-    small{
-      font-size: 90%;
-      color: $gray;
-    }
-    &.agreement{
-      label{
-        font-size: 0.9rem;
-        color: $black;
-        margin-left: 3px;
-      }
+  .form-footer{
+    padding: 10px 35px;
+    a{
+      font-weight: 400;
     }
   }
 }
