@@ -1,7 +1,8 @@
 /*Import funtions from Bootstrap*/
 /* ========= Custom Defined Variables ================*/
 header {
-  border-bottom: 1px solid #c2c2c2; }
+  border-bottom: 1px solid #c2c2c2;
+  background-color: #ffffff; }
   header .language-selector {
     float: right;
     padding-left: 5px;
@@ -22,13 +23,102 @@ header {
     header .language-selector i {
       vertical-align: middle; }
 
+main {
+  min-height: calc(100vh - 145px); }
+
+button.btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
 footer {
-  background-color: #232d39; }
+  background-color: #232d39;
+  font-size: 0.75rem;
+  line-height: 60px;
+  height: 60px; }
+  footer .copyright {
+    color: #696969; }
+  footer ul li a.nav-link {
+    color: #ffffff;
+    display: inline-block;
+    padding: 0 0.6rem;
+    position: relative; }
+    footer ul li a.nav-link:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 24px;
+      height: 10px;
+      width: 1px;
+      background-color: #ffffff; }
+  footer ul li:first-child a:before {
+    display: none; }
 
 body {
-  font-size: 14px; }
+  font-size: 14px;
+  background-color: #f3f4f6; }
 
 a {
   color: #2042cb; }
   a:hover {
     color: #2042cb; }
+
+.form-check-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+  .form-check-label input[type="checkbox"]:checked ~ .checkmark:after {
+    display: block; }
+
+.form-check-label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  border: 2px solid #000000; }
+  .form-check-label .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 4px;
+    top: 0;
+    width: 4px;
+    height: 9px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.form-check-label:hover input ~ .checkmark {
+  background-color: #eeeeee; }
+
+.activation {
+  background-color: #ffffff;
+  border-top: 6px solid #002960;
+  padding: 30px 50px;
+  margin-top: 30px; }
+  .activation h4 {
+    margin: 20px 0 20px; }
+  .activation .form-group {
+    margin-bottom: 5px; }
+    .activation .form-group input:not([type='checkbox']) {
+      max-width: 293px;
+      height: 50px;
+      font-size: 0.9rem;
+      border-radius: 0;
+      border: 1px solid #696969; }
+      .activation .form-group input:not([type='checkbox']):disabled {
+        border: 0;
+        opacity: 0.9; }
+    .activation .form-group small {
+      font-size: 90%;
+      color: #696969; }
+    .activation .form-group.agreement label {
+      font-size: 0.9rem;
+      color: #000000;
+      margin-left: 3px; }

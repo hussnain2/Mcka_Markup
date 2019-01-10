@@ -1,10 +1,16 @@
 
 body{
   font-size: $body-font;
+  background-color: $ash-white;
 }
 a{
   color: $link-blue;
   &:hover{
     color: $link-blue;
   }
+}
+
+@mixin heading($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
 }
