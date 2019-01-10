@@ -22,6 +22,9 @@ header {
     header .language-selector i {
       vertical-align: middle; }
 
+footer {
+  background-color: #232d39; }
+
 body {
   font-size: 14px; }
 
