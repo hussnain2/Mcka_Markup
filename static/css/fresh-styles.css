@@ -1,0 +1,31 @@
+/*Import funtions from Bootstrap*/
+/* ========= Custom Defined Variables ================*/
+header {
+  border-bottom: 1px solid #c2c2c2; }
+  header .language-selector {
+    float: right;
+    padding-left: 5px;
+    height: 83px;
+    width: 80px;
+    line-height: 81px;
+    color: #002960;
+    border-left: 1px solid #eeeeee; }
+    header .language-selector .dropdown {
+      display: inline-block; }
+      header .language-selector .dropdown button {
+        color: #002960;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        padding: 0; }
+        header .language-selector .dropdown button:focus {
+          outline: none; }
+    header .language-selector i {
+      vertical-align: middle; }
+
+body {
+  font-size: 14px; }
+
+a {
+  color: #2042cb; }
+  a:hover {
+    color: #2042cb; }

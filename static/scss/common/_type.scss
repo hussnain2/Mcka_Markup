@@ -1,0 +1,10 @@
+
+body{
+  font-size: $body-font;
+}
+a{
+  color: $link-blue;
+  &:hover{
+    color: $link-blue;
+  }
+}
