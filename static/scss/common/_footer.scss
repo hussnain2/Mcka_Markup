@@ -2,7 +2,7 @@ footer{
   background-color: $smoke-gray;
   font-size: 0.75rem;
   line-height: 60px;
-  height: 60px;
+  min-height: 60px;
   margin-top: 40px;
   .copyright{
     color: $gray;
@@ -14,6 +14,9 @@ footer{
         display: inline-block;
         padding: 0 0.6rem;
         position: relative;
+         @media screen and (max-width: 992px){
+           padding: 0 0.4rem;
+         }
         &:before{
           content: "";
           position: absolute;
@@ -33,6 +36,14 @@ footer{
           }
         }
       }
+    }
+  }
+
+  /* On screens that are 992px or less, set the background color to blue */
+  @media screen and (max-width: 992px) {
+    .copyright,.justify-content-end {
+      text-align: center;
+      justify-content: center !important;
     }
   }
 }

@@ -5,3 +5,57 @@ input{
     box-shadow: none !important;
   }
 }
+
+
+form{
+  &.white{
+    .form-group{
+      &.success{
+      input:not([type='checkbox']){
+        border-color: $bg-white-green;
+        color: $bg-white-green;
+      }
+      i{ color: $bg-white-green;}
+    }
+      &.error{
+      input:not([type='checkbox']){
+        border-color: $bg-white-red;
+        color: $bg-white-red;
+      }
+      i{ color: $bg-white-red;}
+    }
+    }
+  }
+  &.black{
+    .form-group{
+      &.success{
+      input:not([type='checkbox']){
+        border-color: $bg-black-green;
+        color: $bg-black-green;
+      }
+      i{ color: $bg-black-green;}
+    }
+      &.error{
+      input:not([type='checkbox']){
+        border-color: $bg-black-red;
+        color: $bg-black-red;
+      }
+      i{ color: $bg-black-red;}
+    }
+    }
+  }
+  .form-group{
+    .ico-field{
+      position: relative;
+      i{
+        position: absolute;
+        right: 15px;
+        top: 13px;
+        content: '';
+      }
+       input:not([type='checkbox']){
+         padding-right: 50px;
+       }
+    }
+  }
+}
