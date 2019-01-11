@@ -51,12 +51,37 @@
       .checkmark{
         top: 2px;
       }
+      .label-animate{
+        position: absolute;
+        font-size: 1rem;
+        top: 15px;
+        left: 10px;
+        color: $gray;
+        transition: all .2s;
+        &.active{
+          font-size: 0.8rem;
+          color: $secondary;
+          top: -19px;
+          left: 0;
+        }
+      }
     }
   }
   .form-footer{
     padding: 10px 35px;
-    a{
-      font-weight: 400;
+    li{
+      font-size: 1rem;
+      color: $black;
+      padding: 0;
+      font-weight: bold;
+      a{
+        font-weight: 400;
+      }
+    }
+  }
+  .modal-dialog{
+    .modal-content{
+      padding: 20px;
     }
   }
 }
