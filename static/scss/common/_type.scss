@@ -2,7 +2,7 @@
 body{
   font-size: $body-font;
   background-color: $ash-white;
-  font-family: 'open-sans', sans-serif;
+  font-family: $font-family-base;
 }
 a{
   color: $link-blue;
