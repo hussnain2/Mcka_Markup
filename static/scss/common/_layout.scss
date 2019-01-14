@@ -1,3 +1,9 @@
 main{
-  min-height: calc(100vh - 145px);
+  min-height: calc(100vh - 200px);
+}
+
+@include media-breakpoint-up(lg){
+  .container{
+    max-width: 1244px;
+  }
 }

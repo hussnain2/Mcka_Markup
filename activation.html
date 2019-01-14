@@ -37,9 +37,9 @@
                             <button class="dropdown-toggle bg-white border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 en
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                            </div>
+                            <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+                                <!---->
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
@@ -51,8 +51,8 @@
 <main role="main">
     <div class="container activation">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-12 form">
-                <h4>Create your Mckinsey Academy Account</h4>
+            <div class="col-lg-7 col-md-12 form">
+                <h4>Create your McKinsey Academy Account</h4>
                 <form action="activation_error.html">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="sara.jane@mckinsey.com" disabled="disabled">
@@ -61,7 +61,7 @@
                         <input type="text" class="form-control" placeholder="Sara Jane" disabled="disabled">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Mckinsey & Company" disabled="disabled">
+                        <input type="text" class="form-control" placeholder="McKinsey & Company" disabled="disabled">
                     </div>
                     <div class="form-group mt-30 position-relative">
                         <span class="label-animate" id="user">Username</span>
@@ -72,9 +72,15 @@
                         <div class="password">
                             <span class="label-animate" id="password">Password</span>
                             <input type="password" class="form-control" id="password-visibility">
-                            <i class="material-icons" id="show-hide" data-toggle="tooltip" data-placement="bottom" title="Show password">visibility_off</i>
+                            <i class="material-icons"
+                               id="show-hide"
+                               data-toggle="popover"
+                               data-container="body"
+                               data-placement="bottom"
+                               data-trigger="hover"
+                               data-content="Show Password">visibility_off</i>
                         </div>
-                        <small class="form-text">Must be ablest 8 characters and include upper and lowercase letters - plus numbers OR special characters.</small>
+                        <small class="form-text">Must be at least 8 characters and include upper and lowercase letters - plus numbers OR special characters.</small>
                     </div>
                     <div class="form-group form-check mt-4 agreement">
 
@@ -84,23 +90,21 @@
                             I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a>.
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg mt-3">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg mt-3">Register</button>
+                    <div class="form-footer">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                Need help?
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Read FAQs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Email Support</a>
+                            </li>
+                        </ul>
+                    </div>
                 </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-7 col-sm-12 offset-lg-2 form-footer">
-                <ul class="nav">
-                    <li class="nav-item">
-                        Need help?
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Read FAQs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Email Support</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -109,11 +113,11 @@
 <footer>
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-xs-12 copyright">Copyright &copy; 2019 Mckinsey & Company. All Rights Reserved</div>
+        <div class="col-md-6 col-xs-12 copyright">Copyright &copy; 2019 McKinsey & Company. All Rights Reserved</div>
         <div class="col-md-6 col-xs-12">
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mckinsey.com</a>
+                    <a class="nav-link" href="#">McKinsey.com</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -136,7 +140,8 @@
 
 <script src="static/js/jquery-1.11.2.min.js"></script>
 <script src="static/js/jquery.main.js"></script>
-<script src="static/js/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/custom.js"></script>
 

@@ -10,7 +10,7 @@
       margin: 20px 0 20px;
     }
     .form-group{
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       input:not([type='checkbox']){
         max-width: 293px;
         height: 50px;
@@ -50,9 +50,6 @@
       }
       .checkmark{
         top: 2px;
-        &:after{
-          top: 1px;
-        }
       }
       .label-animate{
         position: absolute;
@@ -74,14 +71,15 @@
     }
   }
   .form-footer{
-    padding: 10px 35px;
+    position: absolute;
+    bottom: -40px;
     li{
       font-size: 0.88rem;
       color: $black;
       padding: 0.5rem 0.94rem;
       font-weight: bold;
       a{
-        font-weight: bold;
+        font-weight: 400;
         padding: 0;
         font-size: 0.88rem;
       }
@@ -100,12 +98,7 @@
 //Tablet
 @include media-breakpoint-up(md) {
   .activation{
-    margin-right: 0;
-    margin-left: 0;
-    max-width: none;
-    .form-footer{
-      padding: 10px 50px;
-    }
+
   }
 }
 
@@ -124,8 +117,27 @@
         }
       }
     }
-    .form-footer{
-      padding: 10px 20px;
-    }
   }
 }
+
+.popover{
+  background-color: $dark-gray;
+  border: 0;
+  margin-top: 10px;
+  padding: 0 10px 8px;
+  border-radius: 2px;
+  color: $white;
+  position: relative;
+  &:before{
+    width: 12px;
+    height: 6px;
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: calc(50% - 6px);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $dark-gray;
+  }
+}
+

@@ -19,7 +19,9 @@ $(document).ready(function () {
 
     $('#password ~ input').focus(function () {
         $('#password').addClass('active');
-    })
+    });
+})
 
-
-});
+$(function () {
+    $('[data-toggle="popover"]').popover()
+})
