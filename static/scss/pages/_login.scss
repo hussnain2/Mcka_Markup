@@ -2,7 +2,7 @@
 
 .site-wrapper {
   &.login {
-    color: $white;
+    //color: $white;
     min-height: 100vh;
     //background: #000 url("../img/login/McKA-login-bg.png");
     background: #000;
@@ -12,41 +12,44 @@
     }
 
     main {
-      padding: 10% 0;
-      min-height: calc(100vh - 183px);
+      padding: 90px 0;
+      min-height: calc(100vh - 133px);
       @media screen and (max-width: 992px) {
-        min-height: calc(100vh - 186px);
+        min-height: calc(100vh - 153px);
       }
       .heading {
         display: block;
         color: $white;
         margin-bottom: 40px;
-        font-size: 45px;
+        font-size: 2.625rem;
+        font-weight: 300;
         i {
           font-size: inherit;
           line-height: inherit;
           vertical-align: middle;
-          font-size: 50px;
+          font-size: 4.6875rem;
+          margin: 0 -10px;
         }
         @media screen and (max-width: 992px) {
           .nl {
             display: block;
           }
-          font-size: 30px;
+          font-size: 1.875rem;
         }
         @media screen and (max-width: 767px) {
-          font-size: 24px;
+          font-size: 1.5rem;
           i {
-            font-size: 33px;
+            font-size: 2.0625rem;
           }
         }
       }
     }
 
     form {
-      label {
-        color: $light-gray;
+      &.form-wrap {
+        width: 295px;
       }
+
       .form-group {
         margin-bottom: 5px;
         input:not([type='checkbox']) {
@@ -64,7 +67,7 @@
         }
         small {
           font-size: 90%;
-          color: $white;
+          //color: $white;
         }
         &.agreement {
           label {
@@ -73,44 +76,40 @@
             margin-left: 3px;
           }
         }
+        &:not(.success),
+        &:not(.error){
+          label,i{
+          color: $lighter-gray;
+      }
+        }
+
       }
     }
 
-
-
     .form-group {
-    position: relative;
-    & + .form-group {
-      margin-top: 30px;
+      position: relative;
+      & + .form-group {
+        margin-top: 30px;
+      }
     }
-  }
 
-  .form-label {
-    position: absolute;
-    transform: translate( 15px, 15px);
-    z-index: 10;
-    transition: transform 150ms ease-out, font-size 150ms ease-out;
-  }
-
-  .focused .form-label {
-    transform: translate( 0px, -21px);
-    font-size: .95em;
-  }
-
-  .form-input {
-    position: relative;
-   // transition: box-shadow 150ms ease-out;
-    color: $white;
-    &:focus {
-      box-shadow: 0 2px 0 0 blue;
+    .form-label {
+      position: absolute;
+      transform: translate(15px, 15px);
+      z-index: 10;
+      transition: transform 150ms ease-out, font-size 150ms ease-out;
     }
-  }
 
-  .form-input.filled {
-    box-shadow: 0 2px 0 0 lightgreen;
-  }
+    .focused .form-label {
+      transform: translate(0px, -21px);
+      font-size: .85em;
+      color: $white !important;
+    }
 
-
+    .form-input {
+      position: relative;
+      color: $white;
+    }
 
     .quick-links {
       text-align: center;
@@ -141,7 +140,8 @@
       margin: 0 auto;
     }
     footer {
-      background: $bg-login-footer;;
+      background: $bg-login-footer;
+      margin: 0;
     }
 
   }

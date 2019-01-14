@@ -1,4 +1,4 @@
-input {
+input:not([type='checkbox']) {
   font-size: 1rem;
   &:focus {
     outline: none;
@@ -7,6 +7,42 @@ input {
 }
 
 form {
+
+  .form-group {
+    .ico-state{
+      visibility: hidden;
+      transition: all ease 0.3s;
+      transform: scale(0);
+    }
+    .ico-state {
+        position: absolute;
+        right: 10px;
+        top: 13px;
+        content: '';
+      }
+    #show-hide {
+      visibility: visible;
+      position: absolute;
+      right: 10px;
+      top: 14px;
+    }
+
+  }
+
+  .success,
+  .error {
+    .ico-state {
+      visibility: visible;
+      transform: scale(1);
+    }
+    input:not([type='checkbox']) {
+      padding-right: 50px;
+    }
+
+    #show-hide { visibility: hidden;}
+
+  }
+
   &.white {
     .form-group {
       &.success {
@@ -14,8 +50,12 @@ form {
           border-color: $bg-white-green;
           color: $bg-white-green;
         }
-        i {
-          color: $bg-white-green;
+        .ico-state {
+          color: $bg-white-green !important;
+          visibility: visible;
+        }
+        label {
+          visibility: hidden;
         }
       }
       &.error {
@@ -23,12 +63,13 @@ form {
           border-color: $bg-white-red;
           color: $bg-white-red;
         }
-        i {
-          color: $bg-white-red;
+        .ico-state {
+          color: $bg-white-red !important;
         }
       }
     }
   }
+
   &.black {
     .form-group {
       &.success {
@@ -36,8 +77,11 @@ form {
           border-color: $bg-black-green !important;
           color: $bg-black-green !important;
         }
-        i {
-          color: $bg-black-green;
+        .ico-state {
+          color: $bg-black-green !important;
+        }
+        label {
+          visibility: hidden;
         }
       }
       &.error {
@@ -45,27 +89,12 @@ form {
           border-color: $bg-black-red !important;
           color: $bg-black-red !important;
         }
-        i {
-          color: $bg-black-red;
+        .ico-state {
+          color: $bg-black-red !important;
         }
       }
     }
+    small{ color: $white;}
   }
-  .form-group {
-    .ico-field {
-      position: relative;
-      i {
-        position: absolute;
-        right: 15px;
-        top: 13px;
-        content: '';
-      }
-      input:not([type='checkbox']) {
-        padding-right: 50px;
-      }
-    }
-  }
-
-
 
 }
