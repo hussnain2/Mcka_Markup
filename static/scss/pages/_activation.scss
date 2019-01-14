@@ -50,6 +50,9 @@
       }
       .checkmark{
         top: 2px;
+        &:after{
+          top: 1px;
+        }
       }
       .label-animate{
         position: absolute;
@@ -61,22 +64,29 @@
         &.active{
           font-size: 0.8rem;
           color: $secondary;
-          top: -19px;
+          top: -20px;
           left: 0;
         }
+      }
+      &.mt-30{
+        margin-top: 1.9rem;
       }
     }
   }
   .form-footer{
     padding: 10px 35px;
     li{
-      font-size: 1rem;
+      font-size: 0.88rem;
       color: $black;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.94rem;
       font-weight: bold;
       a{
-        font-weight: 400;
+        font-weight: bold;
         padding: 0;
+        font-size: 0.88rem;
+      }
+      &:first-child{
+        padding-left: 0;
       }
     }
   }
@@ -87,3 +97,35 @@
   }
 }
 
+//Tablet
+@include media-breakpoint-up(md) {
+  .activation{
+    margin-right: 0;
+    margin-left: 0;
+    max-width: none;
+    .form-footer{
+      padding: 10px 50px;
+    }
+  }
+}
+
+//Mobile
+@include media-breakpoint-down(xs) {
+  .activation{
+    .form{
+      padding: 10px 20px 30px;
+      h4{
+        margin-top: 10px;
+        font-size: 1.1rem;
+      }
+      .form-group{
+        input:not([type='checkbox']){
+          max-width: 288px;
+        }
+      }
+    }
+    .form-footer{
+      padding: 10px 20px;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 // That is compiled all the sass (bootstrap & local) at once:
 
 //Import all Screens
+
+@import "bootstrap/bootstrap-grid";
 @import "common/variables";
 @import "common/type";
 @import "common/buttons";
