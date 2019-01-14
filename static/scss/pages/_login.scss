@@ -4,25 +4,11 @@
   &.login {
     color: $white;
     min-height: 100vh;
-    background:#000 url("../img/login/McKA-login-bg.png");
+    //background: #000 url("../img/login/McKA-login-bg.png");
+    background: #000;
     background-size: cover;
     a {
       color: $white;
-    }
-
-    header {
-      background: transparent;
-      border: none;
-      .language-selector {
-        border:0;
-        .dropdown {
-          button {
-            background: transparent;
-            color: $white;
-          }
-        }
-      }
-      i{ color: $white;}
     }
 
     main {
@@ -35,62 +21,101 @@
         display: block;
         color: $white;
         margin-bottom: 40px;
-        i{
+        font-size: 45px;
+        i {
           font-size: inherit;
           line-height: inherit;
           vertical-align: middle;
           font-size: 50px;
         }
         @media screen and (max-width: 992px) {
-          .nl{
+          .nl {
             display: block;
           }
           font-size: 30px;
         }
         @media screen and (max-width: 767px) {
           font-size: 24px;
-          i{
+          i {
             font-size: 33px;
           }
         }
       }
     }
+
     form {
-        label {
+      label {
+        color: $light-gray;
+      }
+      .form-group {
+        margin-bottom: 5px;
+        input:not([type='checkbox']) {
+          height: 50px;
+          font-size: 0.9rem;
+          color: $white;
+          border-radius: 0;
+          border: 1px solid $gray;
+          background: transparent;
+          box-shadow: none;
+          &:disabled {
+            border: 0;
+            opacity: 0.9;
+          }
+        }
+        small {
+          font-size: 90%;
           color: $white;
         }
-        .form-group {
-          margin-bottom: 5px;
-          input:not([type='checkbox']) {
-            //max-width: 293px;
-            height: 50px;
+        &.agreement {
+          label {
             font-size: 0.9rem;
-            border-radius: 0;
-            //border: 1px solid $gray;
-            &:disabled {
-              border: 0;
-              opacity: 0.9;
-            }
-          }
-          small {
-            font-size: 90%;
-            color: $white;
-          }
-          &.agreement {
-            label {
-              font-size: 0.9rem;
-              color: $black;
-              margin-left: 3px;
-            }
+            color: $black;
+            margin-left: 3px;
           }
         }
       }
+    }
+
+
+
+    .form-group {
+    position: relative;
+    & + .form-group {
+      margin-top: 30px;
+    }
+  }
+
+  .form-label {
+    position: absolute;
+    transform: translate( 15px, 15px);
+    z-index: 10;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+  }
+
+  .focused .form-label {
+    transform: translate( 0px, -21px);
+    font-size: .95em;
+  }
+
+  .form-input {
+    position: relative;
+   // transition: box-shadow 150ms ease-out;
+    color: $white;
+    &:focus {
+      box-shadow: 0 2px 0 0 blue;
+    }
+  }
+
+  .form-input.filled {
+    box-shadow: 0 2px 0 0 lightgreen;
+  }
+
 
 
     .quick-links {
       text-align: center;
       padding: 0;
-      margin: 40px 0;
+      margin: 30px 0;
       overflow: hidden;
       li {
         display: inline-block;
@@ -99,22 +124,25 @@
         color: $white;
       }
       a {
-          color: $white;
-          text-transform: capitalize;
-          text-decoration: underline;
-          &:hover {
-            text-decoration: none;
-          }
+        color: $white;
+        text-transform: capitalize;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
         }
-       @media screen and (max-width: 992px) {
-         &:not(:first-child){
-           display: none;
-         }
-       }
+      }
+      @media screen and (max-width: 992px) {
+        &:not(:first-child) {
+          display: none;
+        }
+      }
     }
-    submit{ margin: 0 auto;}
-    footer{
+    submit {
+      margin: 0 auto;
+    }
+    footer {
       background: $bg-login-footer;;
     }
+
   }
 }

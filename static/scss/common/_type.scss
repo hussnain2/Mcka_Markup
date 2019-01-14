@@ -2,13 +2,13 @@
 body{
   font-size: $body-font;
   background-color: $ash-white;
-  font-family: $font-family-base;
+  font-family: 'Open Sans', sans-serif;
 }
 a{
   color: $link-blue;
   &:hover{
     color: $link-blue;
-    text-decoration: underline !important;
+    text-decoration: underline;
   }
 }
 
