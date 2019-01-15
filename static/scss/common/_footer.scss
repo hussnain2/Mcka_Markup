@@ -48,14 +48,6 @@ footer{
   }
 }
 
-@include media-breakpoint-up(md){
-  footer{
-    .container{
-      max-width: none;
-    }
-  }
-}
-
 @include media-breakpoint-up(xs){
   footer{
     line-height: 25px;
