@@ -7,17 +7,17 @@ footer{
   .copyright{
     color: $gray;
   }
-  ul{
-    li{
-      a.nav-link{
+  ul {
+    li {
+      a.nav-link {
         color: $white;
         display: inline-block;
         padding: 0 0.6rem;
         position: relative;
-         @media screen and (max-width: 992px){
-           padding: 0 0.4rem;
-         }
-        &:before{
+        @media screen and (max-width: 992px) {
+          padding: 0 0.4rem;
+        }
+        &:before {
           content: "";
           position: absolute;
           left: 0;
@@ -26,12 +26,13 @@ footer{
           width: 1px;
           background-color: $white;
         }
-        &:hover{
-          text-decoration: underline;}
+        &:hover {
+          text-decoration: underline;
+        }
       }
-      &:first-child{
-        a{
-          &:before{
+      &:first-child {
+        a {
+          &:before {
             display: none;
           }
         }
@@ -41,20 +42,22 @@ footer{
 
   /* On screens that are 992px or less, set the background color to blue */
   @media screen and (max-width: 992px) {
-    .copyright,.justify-content-end {
+    //.copyright,.justify-content-end {
+    //  text-align: center;
+    //  justify-content: center !important;
+    //}
+    [class*="col-"] {
+      padding: 0
+    }
+  }
+  @media screen and (max-width: 767px) {
+    [class*="col-"] {
+      padding:0  15px;
       text-align: center;
-      justify-content: center !important;
     }
   }
 }
 
-@include media-breakpoint-up(md){
-  footer{
-    .container{
-      max-width: none;
-    }
-  }
-}
 
 @include media-breakpoint-up(xs){
   footer{

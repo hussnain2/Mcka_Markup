@@ -95,6 +95,10 @@ form {
       }
     }
     small{ color: $white;}
+    .focused .form-label {
+      color: $white !important;
+    }
+    .form-input { color: $white;}
   }
 
 }
