@@ -39,14 +39,10 @@ $(document).ready(function () {
 
 
 //    Add/Remove class on Need Help link on mobile
-    $(".helpLink").click(function () {
+    $(".login .helpLink").click(function () {
         var self = $(this).parent();
         self.toggleClass("show-links");
-
-        $([document.documentElement, document.body]).animate({
-        scrollTop: $("body").offset().top
-    }, 2000);
-
+        // $("html, body").animate({ scrollTop: $(document).height() }, 1000);
     });
 });
 
