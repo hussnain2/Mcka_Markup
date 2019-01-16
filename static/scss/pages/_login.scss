@@ -12,9 +12,9 @@
 
     main {
       padding: 90px 0;
-      min-height: calc(100vh - 133px);
+      min-height: calc(100vh - 163px);
       @media screen and (max-width: 992px) {
-        min-height: calc(100vh - 134.6px);
+        min-height: calc(100vh - 165.5px);
       }
       @media screen and (max-width: 767px) {
         min-height: calc(100vh - 159px);
@@ -61,7 +61,6 @@
           font-size: 0.9rem;
           border-radius: 0;
           border: 1px solid $gray;
-          background: rgba(0,0,0,0.85);
           box-shadow: none;
           min-width: 295px;
           &:disabled {
@@ -86,6 +85,14 @@
       }
         }
 
+      }
+
+      &.black{
+        .form-group{
+          input:not([type='checkbox']) {
+            background: rgba(0,0,0,0.85);
+          }
+        }
       }
 
     }

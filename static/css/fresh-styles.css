@@ -1275,7 +1275,7 @@ footer ul li a.nav-link:before { top: 8px; }
 
 .site-wrapper.login main { padding: 90px 0; min-height: calc(100vh - 163px); }
 
-@media screen and (max-width: 992px) { .site-wrapper.login main { min-height: calc(100vh - 134.6px); } }
+@media screen and (max-width: 992px) { .site-wrapper.login main { min-height: calc(100vh - 165.5px); } }
 
 @media screen and (max-width: 767px) { .site-wrapper.login main { min-height: calc(100vh - 159px); } }
 
