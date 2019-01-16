@@ -3,7 +3,7 @@
 .site-wrapper {
   &.login {
     min-height: 100vh;
-    background: #000;
+    background: #000 url("../img/login/McKA-login-bg.png") no-repeat;
     background-size: cover;
 
     a {
@@ -49,11 +49,57 @@
       }
     }
 
-    form {
-      &.form-wrap {
-        width: 295px;
-      }
+    .login-McKa-logo{
+      margin: 0 auto;
+    }
 
+    .login-form-wrap{
+      max-width: 395px;
+      margin: 0 auto;
+      padding: 2.8125rem 2.8125rem 1.4125rem 2.8125rem;
+      background: rgba(0,0,0,0.6);
+      input:not([type='checkbox']),
+      button.btn{
+        width: 100%;
+      }
+      .forgot-pswd-link{
+        float: left;
+        margin: 10px 0 0;
+        color: $white;
+      }
+    }
+    .quick-links {
+      text-align: center;
+      padding: 0;
+      margin: 75px -20px 0;
+      overflow: hidden;
+      ul{
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 20px;
+        color: $white;
+        &:first-child{ margin: 0;}
+        @media screen and (max-width: 767px) {
+          &:not(:first-child){
+            display: none;
+          }
+        }
+      }
+      a {
+        color: $white;
+        text-transform: capitalize;
+      }
+      @media screen and (max-width: 992px) {
+        &:not(:first-child) {
+          //display: none;
+        }
+      }
+    }
+    form {
       .form-group {
         margin-bottom: 5px;
         input:not([type='checkbox']) {
@@ -62,7 +108,6 @@
           border-radius: 0;
           border: 1px solid $gray;
           box-shadow: none;
-          min-width: 295px;
           &:disabled {
             border: 0;
             opacity: 0.9;
@@ -86,15 +131,11 @@
         }
 
       }
-
       &.black{
-        .form-group{
           input:not([type='checkbox']) {
-            background: rgba(0,0,0,0.85);
-          }
+            background: $black;
         }
       }
-
     }
 
     .form-group {
@@ -114,43 +155,13 @@
     .focused .form-label {
       transform: translate(0px, -21px);
       font-size: .85em;
-      //color: $white !important;
     }
 
     .form-input {
       position: relative;
     }
 
-    .quick-links {
-      text-align: center;
-      padding: 0;
-      margin: 30px 0;
-      overflow: hidden;
-      li {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 7px 15px;
-        color: $white;
-        @media screen and (max-width: 767px) {
-          &:not(:first-child){
-            display: none;
-          }
-        }
-      }
-      a {
-        color: $white;
-        text-transform: capitalize;
-        text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
-      }
-      @media screen and (max-width: 992px) {
-        &:not(:first-child) {
-          //display: none;
-        }
-      }
-    }
+
     submit {
       margin: 0 auto;
     }
