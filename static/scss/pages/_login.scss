@@ -11,7 +11,7 @@
     }
 
     main {
-      padding: 90px 0;
+      padding: 15px 0 20px;
       min-height: calc(100vh - 163px);
       @media screen and (max-width: 992px) {
         min-height: calc(100vh - 165.5px);
@@ -22,14 +22,14 @@
       .heading {
         display: block;
         color: $white;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         font-size: 2.625rem;
         font-weight: 300;
         i {
           font-size: inherit;
           line-height: inherit;
           vertical-align: middle;
-          font-size: 3.9875rem;
+          font-size: 3.4875rem;
           margin: 0 -10px;
         }
         @media screen and (max-width: 992px) {
@@ -50,7 +50,9 @@
     }
 
     .login-McKa-logo{
-      margin: 0 auto;
+      width: 277px;
+      display: block;
+      margin: 0 auto 20px;
     }
 
     .login-form-wrap{
@@ -58,6 +60,9 @@
       margin: 0 auto;
       padding: 2.8125rem 2.8125rem 1.4125rem 2.8125rem;
       background: rgba(0,0,0,0.6);
+      @media screen and (max-width: 767px) {
+        padding: 30px;
+      }
       input:not([type='checkbox']),
       button.btn{
         width: 100%;
@@ -68,34 +73,93 @@
         color: $white;
       }
     }
+    .helpLink{
+      display: none;
+      font-weight:700;
+      position: relative;
+      i{
+        vertical-align: middle;
+        transition: all ease 0.3s;
+      }
+      @media screen and (max-width: 767px) {
+        display: inline-block;
+        text-align: center;
+      }
+    }
     .quick-links {
       text-align: center;
       padding: 0;
-      margin: 75px -20px 0;
+      margin: 75px -30px 0;
       overflow: hidden;
-      ul{
+       @media screen and (max-width: 767px) {
+         margin: 30px -20px 0;
+       }
+      ul {
         margin: 0;
         padding: 0;
+        transition: all ease 0.3s;
       }
       li {
         display: inline-block;
         vertical-align: middle;
         margin: 0 0 0 20px;
         color: $white;
-        &:first-child{ margin: 0;}
-        @media screen and (max-width: 767px) {
-          &:not(:first-child){
-            display: none;
-          }
+        &:first-child {
+          margin: 0;
         }
       }
       a {
         color: $white;
         text-transform: capitalize;
       }
-      @media screen and (max-width: 992px) {
-        &:not(:first-child) {
-          //display: none;
+
+      @media screen and (max-width: 767px) {
+
+        ul {
+          display: none;
+          visibility: hidden;
+        }
+
+        &.show-links { // when we click on Need Help? link on mobile
+          &:before {
+            transition: all ease 0.2s;
+            position: fixed;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 9;
+            background: rgba(0, 0, 0, 0.6%);
+          }
+          .helpLink {
+            z-index: 999;
+            i {
+              transform: rotate(-180deg);
+            }
+          }
+          ul {
+            display: block;
+            visibility: visible;
+            bottom: 0;
+            top: auto;
+            position: relative;
+            z-index: 999;
+            height: 100%;
+            transition: all ease 0.3s;
+            li {
+              display: block;
+              margin: 15px 0 0;
+              text-align: center;
+              a {
+                background: $blue-sharp;
+                text-transform: capitalize;
+                display: block;
+                padding: 15px 30px;
+              }
+            }
+
+          }
         }
       }
     }
@@ -148,7 +212,7 @@
     .form-label {
       position: absolute;
       transform: translate(15px, 15px);
-      z-index: 10;
+      z-index: 9;
       transition: transform 150ms ease-out, font-size 150ms ease-out;
     }
 

@@ -6,7 +6,6 @@
 @import "common/variables";
 @import "bootstrap/mixins";
 @import "common/type";
-@import "common/popover";
 @import "common/buttons";
 @import "common/form";
 @import "common/reset";
@@ -15,7 +14,7 @@
 @import "common/layout";
 @import "common/footer";
 @import "common/checkbox";
-
+@import "common/popover";
 @import "pages/login";
 @import "pages/activation";
 @import "pages/static";
