@@ -14,15 +14,17 @@
     @extend .mb-2;
   }
   .accordion{
-    a{
-      cursor: pointer;
-      display: block;
-      font-size: 1rem;
-      padding: 0;
-      color: $secondary;
-      @extend .mb-1;
-      &:hover{
+    h5{
+      a{
+        cursor: pointer;
+        display: block;
+        font-size: 1rem;
+        padding: 0;
         color: $secondary;
+        @extend .mb-1;
+        &:hover{
+          color: $secondary;
+        }
       }
     }
     .collapse{
@@ -34,6 +36,11 @@
       text-transform: uppercase;
       @extend .mb-3;
       font-size: 0.75rem;
+    }
+    ul{
+      span{
+        font-weight: 600;
+      }
     }
   }
 }
