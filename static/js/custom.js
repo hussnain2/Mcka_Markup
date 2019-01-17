@@ -42,7 +42,12 @@ $(document).ready(function () {
     $(".login .helpLink").click(function () {
         var self = $(this).parent();
         self.toggleClass("show-links");
-        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+
+        $('html,body').animate({
+            scrollTop: $(".login .quick-links").offset().bottom
+        }, 800);
+        alert
+
     });
 });
 
