@@ -15,9 +15,11 @@
       min-height: calc(100vh - 163px);
       @media screen and (max-width: 992px) {
         min-height: calc(100vh - 165.5px);
+        padding-top: 90px;
       }
       @media screen and (max-width: 767px) {
         min-height: calc(100vh - 159px);
+        padding-top: 50px;
       }
       .heading {
         display: block;
@@ -25,59 +27,61 @@
         margin-bottom: 35px;
         font-size: 2.625rem;
         font-weight: 300;
-        i {
-          font-size: inherit;
-          line-height: inherit;
-          vertical-align: middle;
-          font-size: 3.4875rem;
-          margin: 0 -10px;
+        img {
+          margin: 0 10px;
         }
         @media screen and (max-width: 992px) {
           .nl {
             display: block;
           }
           font-size: 2.575rem;
-          i{ font-size: 3.1875rem;}
+          img {
+            margin-left: 0;
+          }
         }
         @media screen and (max-width: 767px) {
-          font-size: 1.8rem;
+          font-size: 1.7rem;
           margin-bottom: 30px;
-          i {
-            font-size: 2.0625rem;
+          img {
+            width: 11px;
+            margin-right: 6px;
           }
         }
       }
     }
 
-    .login-McKa-logo{
+    .login-McKa-logo {
       width: 277px;
       display: block;
       margin: 0 auto 20px;
+      @media screen and (max-width: 767px) {
+        width: 207px;
+      }
     }
 
-    .login-form-wrap{
+    .login-form-wrap {
       max-width: 395px;
       margin: 0 auto;
       padding: 2.8125rem 2.8125rem 1.4125rem 2.8125rem;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.6);
       @media screen and (max-width: 767px) {
         padding: 30px;
       }
       input:not([type='checkbox']),
-      button.btn{
+      button.btn {
         width: 100%;
       }
-      .forgot-pswd-link{
+      .forgot-pswd-link {
         float: left;
         margin: 10px 0 0;
         color: $white;
       }
     }
-    .helpLink{
+    .helpLink {
       display: none;
-      font-weight:700;
+      font-weight: 700;
       position: relative;
-      i{
+      i {
         vertical-align: middle;
         transition: all ease 0.3s;
       }
@@ -91,9 +95,9 @@
       padding: 0;
       margin: 48px -30px 0;
       overflow: hidden;
-       @media screen and (max-width: 767px) {
-         margin: 30px -20px 0;
-       }
+      @media screen and (max-width: 767px) {
+        margin: 30px -20px 0;
+      }
       ul {
         margin: 0;
         padding: 0;
@@ -188,16 +192,16 @@
           }
         }
         &:not(.success),
-        &:not(.error){
-          label,i{
-          color: $lighter-gray;
-      }
+        &:not(.error) {
+          label, i {
+            color: $lighter-gray;
+          }
         }
 
       }
-      &.black{
-          input:not([type='checkbox']) {
-            background: $black;
+      &.black {
+        input:not([type='checkbox']) {
+          background: $black;
         }
       }
     }
@@ -224,7 +228,6 @@
     .form-input {
       position: relative;
     }
-
 
     submit {
       margin: 0 auto;
