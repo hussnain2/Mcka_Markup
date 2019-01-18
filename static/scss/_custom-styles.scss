@@ -6,6 +6,8 @@
 @import "common/variables";
 @import "bootstrap/mixins";
 @import "common/type";
+@import "common/mixins";
+@import "common/radio";
 @import "common/popover";
 @import "common/buttons";
 @import "common/form";
@@ -18,4 +20,6 @@
 
 @import "pages/login";
 @import "pages/activation";
+@import "pages/self-register";
 @import "pages/static";
+@import "pages/courses";

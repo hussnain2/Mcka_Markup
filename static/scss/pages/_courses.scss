@@ -1,0 +1,79 @@
+.my-courses{
+  h1{
+    @include heading1;
+    @extend .mb-4;
+  }
+  .card{
+    margin-bottom: 30px;
+    border: 0;
+    .overlay-img{
+      position: relative;
+      .card-img-top{
+        @include border-top-radius(4px);
+      }
+      &:after{
+        position: absolute;
+        content: "";
+        opacity: 0.3;
+        @include absolute-100;
+        @include border-top-radius(4px);
+        background: linear-gradient(180deg, $secondary 0%, $black 100%);
+        box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5), 0 1px 3px 0 rgba(0,0,0,0.5);
+      }
+    }
+    .card-body{
+      @include border-bottom-radius(4px);
+      padding: 20px 30px 16px;
+      background-color: $secondary;
+      color: $white;
+      position: relative;
+      h3{
+        font-size: 1.5rem;
+        min-height: 3.5rem;
+        max-height: 3.5rem;
+      }
+      span{
+        font-size: 0.75rem;
+        display: inline-block;
+        vertical-align: middle;
+        &.lesson-count{
+          min-width: 75px;
+        }
+        &.course-status{
+          min-width: 110px;
+        }
+        &.course-progress{
+          min-width: calc(100% - 194px);
+          position: relative;
+          height: 13px;
+          > span{
+            border: 1px solid white;
+            height: 13px;
+            width: 100px;
+            float: right;
+            margin-top: 2px;
+            position: relative;
+            &:before{
+              @include absolute-100;
+              content: '';
+              position: absolute;
+              width: 20%;
+              background-color: $white;
+            }
+          }
+        }
+        .material-icons{
+          font-size: 1.2rem;
+          vertical-align: bottom;
+          margin-right: 2px;
+        }
+      }
+      svg{
+        position: absolute;
+        @include absolute-100;
+        right: auto;
+
+      }
+    }
+  }
+}

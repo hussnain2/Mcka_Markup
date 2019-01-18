@@ -26,7 +26,10 @@ form {
       right: 10px;
       top: 14px;
     }
-
+    small{
+      font-size: 90%;
+      color: $gray;
+    }
   }
 
   .success,

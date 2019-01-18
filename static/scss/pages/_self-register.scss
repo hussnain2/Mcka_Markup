@@ -1,0 +1,16 @@
+.self-registration{
+  h5{
+    @include heading5;
+  }
+  h4{
+    margin: 20px 0 20px;
+  }
+  p{
+    margin-bottom: 1.6rem;
+  }
+  .form{
+    .form-group{
+      margin-bottom: 1.5rem;
+    }
+  }
+}

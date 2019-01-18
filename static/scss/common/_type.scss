@@ -24,16 +24,15 @@ a{
 
 @mixin heading3() {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @mixin heading4() {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @mixin heading5() {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 600;
 }
-
