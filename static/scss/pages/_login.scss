@@ -172,17 +172,17 @@
     form {
       .form-group {
         margin-bottom: 5px;
-        input:not([type='checkbox']) {
-          height: 50px;
-          font-size: 0.9rem;
-          border-radius: 0;
-          border: 1px solid $gray;
-          box-shadow: none;
-          &:disabled {
-            border: 0;
-            opacity: 0.9;
-          }
-        }
+        //input:not([type='checkbox']) {
+        //  height: 50px;
+        //  font-size: 0.9rem;
+        //  border-radius: 0;
+        //  border: 1px solid $gray;
+        //  box-shadow: none;
+        //  &:disabled {
+        //    border: 0;
+        //    opacity: 0.9;
+        //  }
+        //}
         small {
           font-size: 90%;
         }
@@ -204,6 +204,8 @@
       &.black {
         input:not([type='checkbox']) {
           background: $black;
+          width: 100%;
+          max-width: 100%;
         }
       }
     }

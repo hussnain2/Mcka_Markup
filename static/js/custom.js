@@ -52,6 +52,26 @@ $(document).ready(function () {
 });
 
 
+
+// Custom style for Input File ======================
+$('#chooseFile').bind('change', function () {
+  var filename = $("#chooseFile").val();
+  if (/^\s*$/.test(filename)) {
+    $(".file-upload").removeClass('active');
+    $("#noFile").text("No file selected");
+  }
+  else {
+    $(".file-upload").addClass('active');
+    $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+  }
+});
+
+// End of Custom style for Input File ===============
+
+
+
+
+
 $(function () {
     $('[data-toggle="popover"]').popover()
 });

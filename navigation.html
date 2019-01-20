@@ -46,14 +46,16 @@
                                             <span>RA</span>
                                             <img src="" alt="">
                                         </div>
-                                        <a href="#" class="edit-link">edit photo</a>
+                                        <a href="#" class="edit-link" data-toggle="modal" data-target=".editPhotoModal">edit
+                                            photo</a>
                                     </div>
 
 
                                 </div>
                                 <div class="titles-area">
                                     <div class="nameArea">
-                                        <span>Rajal Ajai</span><a class="edit-link" href="#">edit</a>
+                                        <span>Rajal Ajai</span>
+                                        <a data-toggle="modal" data-target=".editFullName" class="edit-link" href="#">edit</a>
                                     </div>
                                     <div class="roleArea">
                                         <span>UX Consultant</span><a class="edit-link" href="#">edit</a>
@@ -63,6 +65,7 @@
                             <div class="content">
                                 <div class="wrap">
                                     <strong class="text-uppercase title">username</strong>
+                                    <strong class="text-uppercase title">raajimk</strong>
                                 </div>
                                 <div class="wrap">
                                     <strong class="text-uppercase title">email</strong>
@@ -73,21 +76,23 @@
                                 <button type="button" class="btn btn-secondary">log out</button>
                             </div>
                         </div>
+
+                        <!--End Modal / popup for reset password -->
                     </div>
 
                     <nav class="nav mainNav headerNav">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                               aria-haspopup="true" aria-expanded="false">
-                                dashboard
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <button class="dropdown-item" type="button">Action</button>
-                                    <button class="dropdown-item" type="button">Another action</button>
-                                    <button class="dropdown-item" type="button">Something else here</button>
-                                </div>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            dashboard
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <button class="dropdown-item" type="button">Action</button>
+                                <button class="dropdown-item" type="button">Another action</button>
+                                <button class="dropdown-item" type="button">Something else here</button>
+                            </div>
 
-                            </a>
+                        </a>
 
-                            <a class="nav-link active" href="#">my courses</a>
+                        <a class="nav-link active" href="#">my courses</a>
 
                     </nav>
                 </div>
@@ -98,36 +103,37 @@
 
 <main role="main">
     <i class="material-icons">
-panorama_fish_eye
-</i>
+        panorama_fish_eye
+    </i>
     <i class="material-icons">
-check_circle
-</i>
+        check_circle
+    </i>
     <i class="material-icons">
-tonality
-</i>
+        tonality
+    </i>
     <i class="material-icons">
-access_time
-</i>
+        access_time
+    </i>
     <i class="material-icons">
-keyboard_arrow_down
-</i>
+        keyboard_arrow_down
+    </i>
     <div class="container activation">
         <div class="row">
             <div class="col">
                 <div class="courseMainHeader">
                     <h1>A2E Essentials</h1>
+
+
                     <!--Course Navigation-->
-                    <div class="courseNavWrap">
-
-
-                        <div class="pn-ProductNav_Wrapper">
-                            <nav id="pnProductNav" class="pn-ProductNav">
+                    <div class="courseNavWrap clearfix">
+                        <div class="pn-ProductNav_Wrapper clearfix">
+                            <nav id="pnProductNav" class="pn-ProductNav clearfix">
                                 <div id="pnProductNavContents" class="mainNav pn-ProductNav_Contents">
 
                                     <a class="nav-link pn-ProductNav_Link" href="#" aria-selected="true">overview</a>
 
-                                    <a class="nav-link pn-ProductNav_Link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                    <a class="nav-link pn-ProductNav_Link dropdown-toggle" data-toggle="dropdown"
+                                       href="#" role="button"
                                        aria-haspopup="true" aria-expanded="true">
                                         LESSONS
                                         <div class="dropdown-menu dropdown-menu-right">
@@ -144,7 +150,8 @@ keyboard_arrow_down
 
                                     <a class="nav-link pn-ProductNav_Link" href="#">Progress</a>
 
-                                    <a class="nav-link pn-ProductNav_Link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                    <a class="nav-link pn-ProductNav_Link dropdown-toggle" data-toggle="dropdown"
+                                       href="#" role="button"
                                        aria-haspopup="true" aria-expanded="true">
                                         Course Materials
                                         <div class="dropdown-menu dropdown-menu-right">
@@ -170,8 +177,6 @@ keyboard_arrow_down
                                 </svg>
                             </button>
                         </div>
-
-
 
 
                     </div>
@@ -205,6 +210,104 @@ keyboard_arrow_down
         </div>
     </div>
 </footer>
+
+
+<!--====== Edit full Name Modal =======-->
+<div class="modal middleSize middleSize noTopBorder fade editFullName" tabindex="-1"
+     role="dialog"
+     aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col">
+                    <h4 class="modal-title">Enter your full name</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="white clearfix">
+                    <div class="form-group">
+                        <label class="form-label" for="exampleInputEmail1">First name</label>
+                        <input type="email" class="form-control form-input" id="exampleInputEmail1"
+                               aria-describedby="emailHelp"
+                               placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="exampleInputEmail1">Last name</label>
+                        <input type="email" class="form-control form-input" id="exampleInputEmail1"
+                               aria-describedby="emailHelp"
+                               placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg mt-20">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--====== End of Edit full Name Modal =======-->
+
+<!-- Edit profile modal -->
+<div class="modal middleSize middleSize noTopBorder fade editPhotoModal" tabindex="-1"
+     role="dialog"
+     aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col">
+                    <h4 class="modal-title">Profile Photo</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="photoEditSteps">
+                    <div class="step">
+                        <div class="head clearfix">
+                            <span class="stepTitle">step 1:</span>
+                            <span class="title">Select New Profile Image</span>
+                        </div>
+                        <div class="inputFileWrap clearfix">
+                            <div class="file-upload">
+                                <div class="file-select">
+                                    <div class="file-select-button" id="">Choose File
+                                    </div>
+                                    <div class="file-select-name" id="noFile">No file selected
+                                    </div>
+                                    <input type="file" name="chooseFile" id="chooseFile">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="head clearfix">
+                            <span class="stepTitle">step 2:</span>
+                            <span class="title">Crop & Save</span>
+                        </div>
+                        <div class="imgCropWrap">
+
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary">crop & save</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
 
 
 <!-- Bootstrap core JavaScript

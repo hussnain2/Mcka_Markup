@@ -6,12 +6,21 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
+// Add carrot icon for Dropdown
+.dropdown-toggle {
+  &:after {
+
+    font-family: 'Material Icons';
+    content: "\e313";
+    border: 0;
+    margin: 0;
+    vertical-align: middle;
+  }
+}
+
 .profileDropdown {
 
   .header {
-    padding: 0 0 15px;
-    margin: 0 0 15px;
-    border-top: 1 solid $light-gray;
     .edit-link {
       color: $secondary;
       font-size: 12px;
@@ -22,6 +31,7 @@
     .titles-area {
       display: inline-block;
       vertical-align: middle;
+      margin: -20px 0 0;
     }
 
     .avatar-area {
@@ -40,7 +50,6 @@
         }
       }
       .nameArea {
-        margin: 0 0 5px;
         color: $black;
         font-size: 16px;
         font-weight: 600;
@@ -61,6 +70,10 @@
       font-size: 12px;
       font-weight: 600;
       line-height: 17px;
+      margin-top: 7px;
+      &:first-child{
+        margin-top: 0;
+      }
     }
     .userMail {
       color: $secondary;
@@ -68,10 +81,15 @@
       line-height: 22px;
 
     }
-    >.wrap {
+    > .wrap {
       border-bottom: 1px solid $light-gray;
       padding: 0 0 15px;
       margin: 0 0 15px;
+      &:first-child{
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid $light-gray;
+      }
     }
   }
 
