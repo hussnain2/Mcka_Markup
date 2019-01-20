@@ -27,8 +27,72 @@ header {
       font-size: 30px;
     }
   }
+
+  &.appHeader {
+    margin: 0 0 35px;
+    border-bottom-color: #ccc;
+    .navbar-brand {
+      padding: 0;
+      max-width: 155px;
+      img{ width: 100%;
+      }
+    }
+    .topRightArea {
+      float: right;
+      width: auto;
+      margin: 19px 0 0;
+    }
+    .profileArea {
+      float: right;
+      width: 40px;
+      height: 40px;
+      margin: 0 0 0 37px;
+      > a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        line-height: 30px;
+        padding: 5px;
+        overflow: hidden;
+        background: $secondary;
+        color: $white;
+        border-radius: 100%;
+        &:hover {
+          text-decoration: none;
+        }
+        &:after {
+          display: none;
+        }
+        span {
+          display: block;
+          text-align: center;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      //profile dropdown
+      .dropdown-menu{
+        width: 375px;
+        padding: 30px;
+      }
+
+    }
+    .headerNav {
+      float: right;
+      width: auto;
+      margin: 20px 0 0;
+      .dropdown-menu {
+        margin: 0;
+      }
+    }
+  }
 }
 
+//Login Header styling / Overwrite
 .site-wrapper {
   &.login {
     header {
@@ -48,13 +112,140 @@ header {
       }
     }
   }
-  .navbar-brand{
+  .navbar-brand {
     padding: 0;
-    img{
+    img {
       margin-left: -5px;
     }
   }
 }
+
+//Course navigation wrraper
+.courseNavWrap{ }
+
+
+//Main (generic custom) navigation styles
+.mainNav {
+
+  >a {
+    display: inline-block;
+    vertical-align: middle;
+    color: #2042CB;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    line-height: 17px;
+    text-align: center;
+    padding: 0 0 15px;
+    margin: 0 0 0 31px;
+    position: relative;
+    &:first-child{ margin: 0;}
+
+    //&:before {
+    //  position: absolute;
+    //  content: '';
+    //  width: 0;
+    //  height: 3px;
+    //  background: transparent;
+    //  bottom: 0;
+    //  transition: all ease 0.3s;
+    //  left: 50%;
+    //  transform: translateX(-50%);
+    //}
+    &:hover {
+      outline: none;
+      text-decoration: none;
+      color: #2E2D39;
+    }
+    &.active {
+      color: #2E2D39;
+      &:before {
+        width: 100%;
+        background: #2E2D39;
+      }
+
+    }
+  }
+  >li{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 31px;
+    position: relative;
+
+
+  }
+
+  &.headerNav{
+    position: relative;
+    >a{
+      &:before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 3px;
+      background: transparent;
+      bottom: 0;
+      transition: all ease 0.3s;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+      &.active {
+      color: #2E2D39;
+      &:before {
+        width: 100%;
+        background: #2E2D39;
+      }
+
+    }
+    }
+  }
+
+
+}
+
+// Inner page's Header (Course navigation or Header)
+.courseMainHeader {
+  h1 {
+    color: $black;
+    font-family: "Open Sans";
+    //font-size: 42px;
+    //font-weight: 300;
+    //line-height: 57px;
+    margin: 0 0 15px;
+
+  }
+}
+
+
+
+
+// BreakPoints for small Screens
+@include media-breakpoint-down(lg){
+  .courseNavWrap{
+    position: relative;
+    //margin: 0 50px;
+    //overflow: auto;
+    //white-space: nowrap;
+    &:after,
+    //&:before{
+    //  position: absolute;
+    //  content: '';
+    //  top: 50%;
+    //  transform: translateY(-50%);
+    //  width: 20px;
+    //  height: 100%;
+    //}
+
+
+    .courseNav{
+      display: block;
+      white-space: nowrap;
+    }
+  }
+}
+
+
 
 @include media-breakpoint-up(md){
   header{
@@ -63,3 +254,4 @@ header {
     }
   }
 }
+

@@ -1,0 +1,78 @@
+// Custom dropdown styling
+
+.dropdown-menu {
+  border: 0.5px solid #EBEBEB;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.profileDropdown {
+
+  .header {
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+    border-top: 1 solid $light-gray;
+    .edit-link {
+      color: $secondary;
+      font-size: 12px;
+      line-height: 17px;
+    }
+
+    .avatar-area,
+    .titles-area {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .avatar-area {
+      margin: 0 28px 0 0;
+    }
+
+    .titles-area {
+      .nameArea,
+      .roleArea {
+        > span, a {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        .edit-link {
+          margin: 0 0 0 10px;
+        }
+      }
+      .nameArea {
+        margin: 0 0 5px;
+        color: $black;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+      }
+      .roleArea {
+        color: #696969;
+        line-height: 19px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .content {
+    .title {
+      display: block;
+      color: $black;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 17px;
+    }
+    .userMail {
+      color: $secondary;
+      font-size: 16px;
+      line-height: 22px;
+
+    }
+    >.wrap {
+      border-bottom: 1px solid $light-gray;
+      padding: 0 0 15px;
+      margin: 0 0 15px;
+    }
+  }
+
+}
