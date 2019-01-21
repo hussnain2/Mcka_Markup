@@ -9,7 +9,7 @@
   white-space: nowrap;
   /* If JS present, let's hide the default scrollbar */
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 992px) {
     /* Make this scrollable when needed */
     overflow-x: auto;
     /* We don't want vertical scrolling */

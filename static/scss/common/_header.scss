@@ -199,18 +199,6 @@ header {
       margin: 0;
     }
 
-
-    //&:before {
-    //  position: absolute;
-    //  content: '';
-    //  width: 0;
-    //  height: 3px;
-    //  background: transparent;
-    //  bottom: 0;
-    //  transition: all ease 0.3s;
-    //  left: 50%;
-    //  transform: translateX(-50%);
-    //}
     &:hover {
       outline: none;
       text-decoration: none;
@@ -258,12 +246,35 @@ header {
     }
   }
 
+  .dropdown-menu{
+    min-width: 176px;
+    padding: 10px 30px;
+    >a{
+	color: #2042CB;
+	font-size: 12px;
+	line-height: 17px;
+      background: inherit;
+      border-top:1px solid #ebebeb;
+      padding: 12px 0;
+      &:hover{ color: $dark-blue;}
+      &:active{
+        background: inherit;
+        color: inherit;
+      }
+      &:first-child{
+        border: none;
+        //padding-top: 0;
+      }
 
+      &:after{ content: "";}
+    }
+  }
 
 }
 
 // Inner page's Header (Course navigation or Header)
 .courseMainHeader {
+  margin-bottom: 18px;
   h1 {
     color: $black;
     font-family: "Open Sans";
@@ -282,7 +293,7 @@ header {
   }
 
   .pn-Advancer{ display: none;}
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 992px){
     .pn-ProductNav_Wrapper{padding: 0 30px;}
     .pn-Advancer{ padding: 0 3px; display: block;}
   }

@@ -5,10 +5,15 @@ body, html{
 }
 
 
+.row{
+  >.col{ padding: 0;}
+}
+
 //Add max-width of container for large screens
 @include media-breakpoint-up(lg){
   .container{ max-width: 1244px;}
 }
+
 
 
 // Browser select text color
