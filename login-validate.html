@@ -56,11 +56,11 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="heading text-center">Leading transformation <i class="material-icons">keyboard_arrow_right </i>
-                        Transforming leaders</h1>
+                    <img class="login-McKa-logo" src="static/img/login/McKA-logo.png" alt="">
+                    <h1 class="heading text-center">Leading transformation <span class="nl"><img src="static/img/login/login-arrow.svg"> Transforming leaders</span></h1>
 
                     <div class="login-form-wrap">
-                        <form class="black">
+                        <form class="black clearfix">
                             <div class="form-group success">
                                 <label class="form-label" for="exampleInputEmail1">Username or email</label>
 
@@ -72,17 +72,17 @@
 
 
                             </div>
-                            <div class="form-group">
+                            <div class="form-group error">
                                 <label class="form-label" for="password-visibility">Password</label>
                                 <input type="password" class="form-control form-input" id="password-visibility"
                                        placeholder="">
                                 <i class="material-icons"
-                                   id="show-hide"
-                                   data-toggle="popover"
-                                   data-container="body"
-                                   data-placement="bottom"
-                                   data-trigger="hover"
-                                   data-content="Show Password">visibility_off</i>
+                               id="show-hide"
+                               data-toggle="popover"
+                               data-container="body"
+                               data-placement="bottom"
+                               data-trigger="hover"
+                               data-content="Show Password">visibility_off</i>
                                 <i class="material-icons ico-state">
                                     error
                                 </i>
@@ -94,17 +94,17 @@
                             <div class="form-group text-center">
                                 <button disabled type="submit" class="btn btn-primary btn-lg mt-20">LOG IN</button>
 
-                                <a class="forgot-pswd-link" href="#" data-toggle="modal" data-target=".bd-example-modal-lg"><strong>Forgot password?</strong></a>
+                                <a class="forgot-pswd-link" href="#" data-toggle="modal" data-target=".resetPasswordModal"><strong>Forgot password?</strong></a>
                             </div>
 
 
                         </form>
                         <div class="quick-links">
-                            <!--<li><strong>Need help?</strong></li>-->
+                            <a href="javascript:Void(0)" class="helpLink">Need help? <i class="material-icons">keyboard_arrow_down</i></a>
                             <ul>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Email support</a></li>
-                                <li><a href="#">About Mckinsey Academy</a></li>
+                                <li><a href="FAQ.html" target="_blank">FAQs</a></li>
+                                <li><a href="mailto:support@mckinseyacademy.com?Subject=Trouble logging in">Email support</a></li>
+                                <li><a href="https://www.mckinsey.com/business-functions/learning-programs-for-clients/overview/mckinsey-academy/how-we-help-clients">About Mckinsey Academy</a></li>
                             </ul>
 
                         </div>
@@ -116,8 +116,8 @@
 
 
     <!--Modal / popup for reset password -->
-    <!-- Large modal -->
-    <div class="modal reset-password noTopBorder fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    <!-- Middle modal -->
+    <div class="modal middleSize reset-password noTopBorder fade resetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -134,7 +134,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="white">
+                    <form class="white clearfix">
                     <div class="form-group">
                         <label class="form-label" for="exampleInputEmail1">Your email address</label>
                         <input type="email" class="form-control form-input" id="exampleInputEmail1"

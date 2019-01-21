@@ -1,4 +1,5 @@
-button.btn {
+button.btn,
+a.btn{
   font-weight: 600;
   font-size: 12px;
   height: 40px;
@@ -8,7 +9,7 @@ button.btn {
   letter-spacing: 0.5px;
   text-align: center;
   padding: 0 20px;
-
+  display: inline-block;
   //Secondary button .btn-primary
   &.btn-primary {
     background-color: $secondary;

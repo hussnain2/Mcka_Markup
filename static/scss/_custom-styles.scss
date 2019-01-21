@@ -12,14 +12,19 @@
 @import "common/buttons";
 @import "common/form";
 @import "common/reset";
+@import "common/inputFile";
 @import "common/modal";
 @import "common/header";
 @import "common/layout";
 @import "common/footer";
 @import "common/checkbox";
-
+@import "common/popover";
+@import "common/nav-animation";
+@import "common/dropdown";
+@import "common/userAvatar";
 @import "pages/login";
 @import "pages/activation";
 @import "pages/self-register";
 @import "pages/static";
 @import "pages/courses";
+@import "pages/courseLanding";
