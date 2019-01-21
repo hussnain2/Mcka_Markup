@@ -31,48 +31,108 @@
         font-size: 1.5rem;
         min-height: 3.5rem;
         max-height: 3.5rem;
+        overflow: hidden;
       }
-      span{
-        font-size: 0.75rem;
-        display: inline-block;
-        vertical-align: middle;
-        &.lesson-count{
-          min-width: 75px;
+      .course-detail{
+        display: table;
+        width: 100%;
+        span{
+          font-size: 0.75rem;
+          display: table-cell;
+          vertical-align: middle;
+          &.lesson-count{
+            width: 26%;
+          }
+          &.course-status{
+            width: 44%;
+          }
+
+          &.course-progress{
+            > span{
+              border: 1px solid white;
+              height: 13px;
+              width: 65%;
+              margin-top: 3px;
+              position: relative;
+              float: right;
+              &:before{
+                @include absolute-100;
+                content: '';
+                position: absolute;
+                width: 20%;
+                background-color: $white;
+              }
+            }
+          }
+          .material-icons{
+            font-size: 1rem;
+            vertical-align: sub;
+            margin-right: 2px;
+          }
         }
-        &.course-status{
-          min-width: 110px;
+      }
+      img.bookmark{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    &.archived{
+      .overlay-img{
+        &:after{
+          background: linear-gradient(180deg, $dark-gray 0%, $black 100%);
+          box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5), 0 1px 3px 0 rgba(0,0,0,0.5);
         }
-        &.course-progress{
-          min-width: calc(100% - 194px);
-          position: relative;
-          height: 13px;
-          > span{
-            border: 1px solid white;
-            height: 13px;
-            width: 100px;
-            float: right;
-            margin-top: 2px;
-            position: relative;
-            &:before{
-              @include absolute-100;
-              content: '';
-              position: absolute;
-              width: 20%;
-              background-color: $white;
+      }
+      .card-body{
+        background-color: $dark-gray;
+      }
+    }
+  }
+  a.d-block{
+    &:hover{
+      .card{
+        box-shadow: 0 0 30px lighten($gray, 30%);
+        h3{
+          text-decoration: underline;
+        }
+        .card-body{
+          background-color: $dark-blue;
+        }
+      }
+      .archived{
+        .card-body{
+          background-color: $dark-gray;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@include media-breakpoint-down(sm){
+  .my-courses{
+    [class*="col"]{
+      padding: 0;
+      h1{
+        display: none;
+      }
+      .card{
+        margin-bottom: 10px;
+        .card-body{
+          padding: 20px;
+          h3{
+            font-size: 1rem;
+            min-height: 2.2rem;
+            max-height: 2.2rem;
+          }
+          span{
+            &.course-progress{
+              min-width: calc(100% - 180px);
             }
           }
         }
-        .material-icons{
-          font-size: 1.2rem;
-          vertical-align: bottom;
-          margin-right: 2px;
-        }
-      }
-      svg{
-        position: absolute;
-        @include absolute-100;
-        right: auto;
-
       }
     }
   }
