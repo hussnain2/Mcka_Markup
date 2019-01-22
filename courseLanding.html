@@ -37,7 +37,7 @@
                             <span>RA</span>
                             <img src="static/img/McKA-logo-white@2x.png" width="160">
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right profileDropdown">
+                        <div class="dropdown-menu large-menu dropdown-menu-right profileDropdown">
                             <div class="header">
                                 <div class="avatar-area">
 
@@ -58,7 +58,8 @@
                                         <a data-toggle="modal" data-target=".editFullName" class="edit-link" href="#">edit</a>
                                     </div>
                                     <div class="roleArea">
-                                        <span>UX Consultant</span><a class="edit-link" href="#">edit</a>
+                                        <span>UX Consultant</span>
+                                        <a data-toggle="modal" data-target=".editRole" class="edit-link" href="#">edit</a>
                                     </div>
                                 </div>
                             </div>
@@ -81,15 +82,19 @@
                     </div>
 
                     <nav class="nav mainNav headerNav">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                           aria-haspopup="true" aria-expanded="false">dashboard
-                            <div class="dropdown-menu dropdown-menu-right clearfix">
+                        <ul>
+                            <li>
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                   aria-haspopup="true" aria-expanded="false">dashboard</a>
+                                <div class="dropdown-menu middle-menu dropdown-menu-right clearfix">
                                 <a class="dropdown-item" href="#">Executive Leadership Program</a>
                                 <a class="dropdown-item" href="#">Leadership Development Program</a>
                             </div>
-                        </a>
-
-                        <a class="nav-link active" href="#">my courses</a>
+                            </li>
+                            <li class="active">
+                                <a class="nav-link" href="#">my courses</a>
+                            </li>
+                        </ul>
 
                     </nav>
                 </div>
@@ -111,41 +116,209 @@
                             <nav id="pnProductNav" class="pn-ProductNav clearfix">
                                 <div id="pnProductNavContents" class="mainNav pn-ProductNav_Contents">
 
-                                    <a class="nav-link pn-ProductNav_Link" href="#" aria-selected="true">overview</a>
+                                    <ul>
+                                        <li class="active"><a class="nav-link pn-ProductNav_Link" href="#"
+                                                              aria-selected="true">overview</a></li>
 
-                                    <a href="#" class="nav-link pn-ProductNav_Link dropdown-toggle"
-                                       data-toggle="dropdown"
-                                       aria-haspopup="true" aria-expanded="true">
-                                        LESSONS
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <!--<a class="dropdown-item" href="#">Action</a>-->
-                                            <!--<a class="dropdown-item" href="#">Another action</a>-->
-                                            <!--<a class="dropdown-item" href="#">Something else here</a>-->
-                                            <a class="dropdown-item" href="#">Announcements</a>
-                                            <a class="dropdown-item" href="#">Course Overview</a>
-                                            <a class="dropdown-item" href="#">Resources</a>
+                                        <li>
+                                            <a href="#" class="nav-link pn-ProductNav_Link dropdown-toggle"
+                                               data-toggle="dropdown">LESSONS</a>
+                                            <div class="dropdown-menu allLessons dropdown-menu-left">
+                                                <ul class="allCoursesList">
 
-                                        </div>
-                                    </a>
-                                    <a class="nav-link pn-ProductNav_Link" href="#">Discussion</a>
+                                                    <li class="courseRow">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>100</span>:</div>
+                                                            <div class="data title"><span>Introduction</span></div>
+                                                            <div class="data status"><i class="material-icons">panorama_fish_eye</i>
+                                                                not started
+                                                            </div>
 
-                                    <a class="nav-link pn-ProductNav_Link" href="#">Group work</a>
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
 
-                                    <a class="nav-link pn-ProductNav_Link" href="#">COHORT</a>
+                                                    <li class="courseRow">
+                                                        <div class="holder">
+                                                            <div class="data serial">leasson <span>1</span>:</div>
+                                                            <div class="data title">
+                                                                <span>Prioritizing Effectively</span></div>
 
-                                    <a class="nav-link pn-ProductNav_Link" href="#">Progress</a>
+                                                            <div class="data status"><i
+                                                                    class="material-icons">tonality</i> In Progress
+                                                            </div>
 
-                                    <a href="#" class="nav-link pn-ProductNav_Link dropdown-toggle"
-                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        Course Materials
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#">Announcements</a>
-                                            <a class="dropdown-item" href="#">Course Overview</a>
-                                            <a class="dropdown-item" href="#">Resources</a>
-                                        </div>
-                                    </a>
-                                    <a class="nav-link pn-ProductNav_Link" href="#">Notifications</a>
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                        <img src="static/img/bookmark.svg" class="bookmark" alt="">
+                                                    </li>
 
+                                                    <li class="courseRow complete">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>1</span>:</div>
+                                                            <div class="data title"><span>Creating Business Value<span>
+                                                            </div>
+
+                                                            <div class="data status"><i class="material-icons">check_circle</i>
+                                                                complete
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+
+
+                                                     <li class="courseRow">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>100</span>:</div>
+                                                            <div class="data title"><span>Introduction</span></div>
+                                                            <div class="data status"><i class="material-icons">panorama_fish_eye</i>
+                                                                not started
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="courseRow">
+                                                        <div class="holder">
+                                                            <div class="data serial">leasson <span>1</span>:</div>
+                                                            <div class="data title">
+                                                                <span>Prioritizing Effectively</span></div>
+
+                                                            <div class="data status"><i
+                                                                    class="material-icons">tonality</i> In Progress
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                        <img src="static/img/bookmark.svg" class="bookmark" alt="">
+                                                    </li>
+
+                                                    <li class="courseRow complete">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>1</span>:</div>
+                                                            <div class="data title"><span>Creating Business Value<span>
+                                                            </div>
+
+                                                            <div class="data status"><i class="material-icons">check_circle</i>
+                                                                complete
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+
+
+                                                    <li class="courseRow locked">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>1</span>:</div>
+                                                            <div class="data title"><span>Enhancing Ownership <i
+                                                                    class="material-icons locked">lock</i></span></div>
+
+                                                            <div class="data status"><i
+                                                                    class="material-icons">tonality</i> In Progress
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="courseRow">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>1</span>:</div>
+                                                            <div class="data title"><span>Introduction</span></div>
+
+                                                            <div class="data status"><i class="material-icons">panorama_fish_eye</i>
+                                                                not started
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="courseRow">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>1</span>:</div>
+                                                            <div class="data title">
+                                                                <span>Prioritizing Effectively</span></div>
+                                                            <div class="data status"><i
+                                                                    class="material-icons">tonality</i> In Progress
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="courseRow complete">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>1</span>:</div>
+                                                            <div class="data title"><span>Creating Business Value</span>
+                                                            </div>
+                                                            <div class="data status"><i class="material-icons">check_circle</i>
+                                                                complete
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="courseRow">
+                                                        <div class="holder">
+                                                            <div class="data serial">lessons <span>1</span>:</div>
+                                                            <div class="data title"><span>Enhancing Ownership</span>
+                                                            </div>
+                                                            <div class="data status"><i
+                                                                    class="material-icons">tonality</i> In Progress
+                                                            </div>
+                                                        </div>
+                                                        <div class="description">Tell me and I forget. Teach me and I
+                                                            remember. Involve me and I learn. - Benjamin Franklin
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a class="nav-link pn-ProductNav_Link" href="#"
+                                               aria-selected="">Discussion</a></li>
+                                        <li><a class="nav-link pn-ProductNav_Link" href="#" aria-selected="">Group
+                                            work</a></li>
+                                        <li><a class="nav-link pn-ProductNav_Link" href="#" aria-selected="">COHORT</a>
+                                        </li>
+                                        <li><a class="nav-link pn-ProductNav_Link" href="#"
+                                               aria-selected="">Progress</a></li>
+                                        <li>
+                                            <a href="#" class="nav-link pn-ProductNav_Link dropdown-toggle"
+                                               data-toggle="dropdown">Course Materials</a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Announcements</a>
+                                                <a class="dropdown-item" href="#">Course Overview</a>
+                                                <a class="dropdown-item" href="#">Resources</a>
+                                            </div>
+                                        </li>
+                                        <li><a class="nav-link pn-ProductNav_Link" href="#" aria-selected="">Notifications</a>
+                                        </li>
+                                    </ul>
 
                                     <span id="pnIndicator" class="pn-ProductNav_Indicator"></span>
                                 </div>
@@ -178,7 +351,6 @@
                         <div class="progressArea bar"></div>
                     </div>
 
-
                     <div class="widget col-md-4">
                         <div class="contenrArea">
                             <div class="widgetTitle clearfix"><span>Engagement</span></div>
@@ -187,7 +359,6 @@
                         </div>
                         <div class="progressArea"></div>
                     </div>
-
 
                     <div class="widget col-md-4">
                         <div class="contenrArea">
@@ -212,8 +383,8 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Introduction</a></div>
+                                    <div class="data serial">lessons <span>100</span>:</div>
+                                    <div class="data title"><span>Introduction</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">panorama_fish_eye</i> not started</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -223,19 +394,20 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Prioritizing Effectively</a></div>
+                                    <div class="data serial">leasson <span>1</span>:</div>
+                                    <div class="data title"><span>Prioritizing Effectively</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">tonality</i> In Progress</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
                                 </div>
                                 <div class="description">Tell me and I forget. Teach me and I remember. Involve me and I learn. - Benjamin Franklin</div>
+                                <img src="static/img/bookmark.svg" class="bookmark" alt="">
                             </li>
 
                             <li class="courseRow complete">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Creating Business Value</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Creating Business Value<span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">check_circle</i> complete</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -245,8 +417,8 @@
 
                             <li class="courseRow locked">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Enhancing Ownership <i class="material-icons locked">lock</i></a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Enhancing Ownership <i class="material-icons locked">lock</i></span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">tonality</i> In Progress</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -256,8 +428,8 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Introduction</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Introduction</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">panorama_fish_eye</i> not started</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -267,8 +439,8 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Prioritizing Effectively</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Prioritizing Effectively</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">tonality</i> In Progress</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -278,8 +450,8 @@
 
                             <li class="courseRow complete">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Creating Business Value</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Creating Business Value</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">check_circle</i> complete</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -289,8 +461,8 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Enhancing Ownership</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Enhancing Ownership</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">tonality</i> In Progress</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -300,8 +472,8 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Introduction</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Introduction</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">panorama_fish_eye</i> not started</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -311,8 +483,8 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Prioritizing Effectively</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Prioritizing Effectively</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">tonality</i> In Progress</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -322,8 +494,8 @@
 
                             <li class="courseRow complete">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Creating Business Value</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Creating Business Value</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">check_circle</i> complete</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -333,8 +505,8 @@
 
                             <li class="courseRow">
                                 <div class="holder">
-                                    <div class="data serial">leasson <span>1</span></div>
-                                    <div class="data title"><a href="#">Enhancing Ownership</a></div>
+                                    <div class="data serial">lessons <span>1</span>:</div>
+                                    <div class="data title"><span>Enhancing Ownership</span></div>
                                     <div class="data time"><i class="material-icons">access_time</i> 10-15 mins</div>
                                     <div class="data status"><i class="material-icons">tonality</i> In Progress</div>
                                     <div class="data progressBar"><span class="figure">0%</span><div class="statusBar"></div></div>
@@ -409,7 +581,7 @@
 
 
 <!--====== Edit full Name Modal =======-->
-<div class="modal middleSize middleSize noTopBorder fade editFullName" tabindex="-1"
+<div class="modal middleSize noTopBorder fade editFullName" tabindex="-1"
      role="dialog"
      aria-labelledby="myLargeModalLabel"
      aria-hidden="true">
@@ -426,17 +598,11 @@
             <div class="modal-body">
                 <form class="white clearfix">
                     <div class="form-group">
-                        <label class="form-label" for="exampleInputEmail1">First name</label>
+                        <label class="form-label" for="exampleInputEmail1">Your role</label>
                         <input type="email" class="form-control form-input" id="exampleInputEmail1"
                                aria-describedby="emailHelp"
                                placeholder="">
 
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="exampleInputEmail1">Last name</label>
-                        <input type="email" class="form-control form-input" id="exampleInputEmail1"
-                               aria-describedby="emailHelp"
-                               placeholder="">
                     </div>
 
                     <div class="form-group">
@@ -448,6 +614,43 @@
     </div>
 </div>
 <!--====== End of Edit full Name Modal =======-->
+
+
+<!--====== Edit Role Modal =======-->
+<div class="modal middleSize noTopBorder fade editRole" tabindex="-1"
+     role="dialog"
+     aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="col">
+                    <h4 class="modal-title">Enter your Role</h4>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="white clearfix">
+                    <div class="form-group">
+                        <label class="form-label" for="exampleInputEmail1">Role</label>
+                        <input type="email" class="form-control form-input" id="exampleInputEmail1"
+                               aria-describedby="emailHelp"
+                               placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg mt-20">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--====== End of Edit Role Modal =======-->
+
+
+
 
 <!-- Edit profile modal -->
 <div class="modal middleSize middleSize noTopBorder fade editPhotoModal" tabindex="-1"

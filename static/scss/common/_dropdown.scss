@@ -1,9 +1,111 @@
 // Custom dropdown styling
-
 .dropdown-menu {
   border: 0.5px solid #EBEBEB;
   background-color: #FFFFFF;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  font-size: 12px;
+  line-height: 17px;
+  min-width: 176px;
+  padding: 10px 30px;
+  left: 2% !important;
+  &.dropdown-menu-left{
+    left: 0 !important;
+    &:after, &:before {
+      right: auto;
+      left: 9%;
+    }
+  }
+  &.allLessons{
+    .allCoursesList {
+      max-height: 300px;
+    overflow-y: auto;
+      .holder {
+        .data{
+          padding: 10px 3px;
+          &.title{
+            width: 164px;
+            font-size: 12px;
+          }
+          &.status{
+            width: auto;
+          }
+        }
+        .description{}
+      }
+
+      >.courseRow{
+        cursor: pointer;
+        .description { display: none;}
+      }
+    }
+  }
+
+
+
+   &:after, &:before {
+    bottom: 100%;
+    right: 9%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 8px;
+    margin-left: -8px;
+  }
+  &:before {
+    border-color: rgba(238, 238, 238, 0);
+    border-bottom-color: #dadada;
+    border-width: 9px;
+    margin-left: -12px;
+  }
+
+
+  > a {
+    color: #2042CB;
+    font-size: 12px;
+    line-height: 17px;
+    background: inherit;
+    border-top: 1px solid #ebebeb;
+    padding: 12px 0;
+    &:hover {
+      color: $dark-blue;
+      background: inherit;
+    }
+    &:active {
+      background: inherit;
+      color: inherit;
+    }
+    &:first-child {
+      border: none;
+      //padding-top: 0;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
+  //profile dropdown on main Header
+  &.large-menu {
+    width: 376px !important;
+    padding: 30px;
+    top: 22px !important;
+    .footer {
+
+      button.btn {
+        width: 100%;
+      }
+    }
+  }
+  &.middle-menu{
+    min-width: 337px !important;
+  }
 }
 
 // Add carrot icon for Dropdown
@@ -13,85 +115,8 @@
     font-family: 'Material Icons';
     content: "\e313";
     border: 0;
-    margin: 0;
+    font-size: 16px;
+    margin: 0 0 0 1px;
     vertical-align: middle;
   }
-}
-
-.profileDropdown {
-
-  .header {
-    .edit-link {
-      color: $secondary;
-      font-size: 12px;
-      line-height: 17px;
-    }
-
-    .avatar-area,
-    .titles-area {
-      display: inline-block;
-      vertical-align: middle;
-      margin: -20px 0 0;
-    }
-
-    .avatar-area {
-      margin: 0 28px 0 0;
-    }
-
-    .titles-area {
-      .nameArea,
-      .roleArea {
-        > span, a {
-          display: inline-block;
-          vertical-align: middle;
-        }
-        .edit-link {
-          margin: 0 0 0 10px;
-        }
-      }
-      .nameArea {
-        color: $black;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 22px;
-      }
-      .roleArea {
-        color: #696969;
-        line-height: 19px;
-        font-weight: normal;
-        margin-top: 5px;
-      }
-    }
-  }
-
-  .content {
-    .title {
-      display: block;
-      color: $black;
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 17px;
-      margin-top: 7px;
-      &:first-child{
-        margin-top: 0;
-      }
-    }
-    .userMail {
-      color: $secondary;
-      font-size: 16px;
-      line-height: 22px;
-
-    }
-    > .wrap {
-      border-bottom: 1px solid $light-gray;
-      padding: 0 0 15px;
-      margin: 0 0 15px;
-      &:first-child{
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid $light-gray;
-      }
-    }
-  }
-
 }

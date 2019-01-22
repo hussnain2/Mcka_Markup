@@ -78,6 +78,42 @@ $(function () {
 
 
 
+// ================   Dropdown Append From bobdy ==================
+(function () {
+    // hold onto the drop down menu
+    var dropdownMenu;
+
+    // and when you show it, move it to the body
+    $(window).on('show.bs.dropdown', function (e) {
+
+        // grab the menu
+        dropdownMenu = $(e.target).find('.dropdown-menu');
+
+        // detach it and append it to the body
+        $('body').append(dropdownMenu.detach());
+
+        // grab the new offset position
+        var eOffset = $(e.target).offset();
+
+        // make sure to place it where it would normally go (this could be improved)
+        dropdownMenu.css({
+            'display': 'block',
+                'top': eOffset.top + $(e.target).outerHeight(),
+                'left': eOffset.left
+        });
+    });
+
+    // and when you hide it, reattach the drop down, and hide it normally
+    $(window).on('hide.bs.dropdown', function (e) {
+        $(e.target).append(dropdownMenu.detach());
+        dropdownMenu.hide();
+    });
+})();
+
+// ================  Emd Dropdown Append From bobdy ===============
+
+
+
 //Main Navigation animation Js ===== https://codepen.io/benfrain/pen/zZZLaP =====
 
 $(window).on('resize load', function () {
@@ -126,7 +162,7 @@ pnProductNav.addEventListener("scroll", function() {
             ticking = false;
         });
     }
-    ticking = true;
+    ticking = true;$
 });
 
 
@@ -208,7 +244,9 @@ pnProductNavContents.addEventListener(
 
 // Handle setting the currently active link
 pnProductNavContents.addEventListener("click", function(e) {
+
 	var links = [].slice.call(document.querySelectorAll(".pn-ProductNav_Link"));
+	console.log('links ', links);
 	links.forEach(function(item) {
 		item.setAttribute("aria-selected", "false");
 	})
@@ -223,6 +261,7 @@ function moveIndicator(item, color) {
     if(item.nodeName !== 'A'){
         return false;
     }
+
     var textPosition = item.getBoundingClientRect();
     var container = pnProductNavContents.getBoundingClientRect().left;
     var distance = textPosition.left - container;

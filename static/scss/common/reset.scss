@@ -6,7 +6,13 @@ body, html{
 
 
 .row{
-  >.col{ padding: 0;}
+  >.col{
+    //padding: 0;
+
+    //@media screen and (max-width: 767px) {
+    //  padding: 0 15px;
+    //}
+  }
 }
 
 //Add max-width of container for large screens

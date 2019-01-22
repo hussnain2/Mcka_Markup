@@ -103,12 +103,15 @@
 }
 
 .pn-Advancer_Icon {
-  width: 9px;
+  width: 7px;
   height: 25px;
-  fill: #bbb;
+  fill: $secondary;
 }
 
 .pn-ProductNav_Indicator {
+
+  display: none;
+
   position: absolute;
   bottom: 0;
   left: 0;
