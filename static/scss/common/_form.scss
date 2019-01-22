@@ -19,6 +19,11 @@ input:not([type='checkbox']) {
 form {
 
   .form-group {
+    position: relative;
+    margin-bottom:1.5rem;
+    //& + .form-group {
+    //  margin-top: 30px;
+    //}
     .ico-state {
       visibility: hidden;
       transition: all ease 0.3s;
@@ -36,32 +41,23 @@ form {
       right: 10px;
       top: 14px;
     }
-    small{
+    small {
       font-size: 90%;
       color: $gray;
     }
   }
 
-  .form-group {
-      position: relative;
-      & + .form-group {
-        margin-top: 30px;
-      }
-    }
-
-    .form-label {
-      position: absolute;
-      transform: translate(15px, 15px);
-      z-index: 9;
-      transition: transform 150ms ease-out, font-size 150ms ease-out;
-    }
-
-    .focused .form-label {
-      transform: translate(0px, -21px);
-      font-size: .85em;
-    }
-
-
+  .form-label {
+    position: absolute;
+    transform: translate(15px, 15px);
+    z-index: 9;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+  }
+  .focused .form-label {
+    transform: translate(0px, -21px);
+    font-size: .85em;
+    color: $secondary;
+  }
 
   //
 

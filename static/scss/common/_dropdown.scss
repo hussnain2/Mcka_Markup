@@ -8,9 +8,30 @@
   line-height: 17px;
   min-width: 176px;
   padding: 10px 30px;
-  left: 2% !important;
+  left: 20px !important;
+
+  &:after {
+     position: absolute;
+     top:-9px;
+     right: 17px;
+     content: "";
+     width: 20px;
+     height: 10px;
+     background: url("../img/dropdown-arrow.png") no-repeat;
+     display: block;
+  }
+
+
+
+  &.profile-area{
+    &:after,
+    &:before{
+      right: 30px;
+    }
+  }
+
   &.dropdown-menu-left{
-    left: 0 !important;
+    left: 20px !important;
     &:after, &:before {
       right: auto;
       left: 9%;
@@ -41,30 +62,18 @@
     }
   }
 
-
-
-   &:after, &:before {
-    bottom: 100%;
-    right: 9%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-  &:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #fff;
-    border-width: 8px;
-    margin-left: -8px;
-  }
-  &:before {
-    border-color: rgba(238, 238, 238, 0);
-    border-bottom-color: #dadada;
-    border-width: 9px;
-    margin-left: -12px;
-  }
+  //&:after {
+  //  border-color: rgba(255, 255, 255, 0);
+  //  border-bottom-color: #fff;
+  //  border-width: 8px;
+  //  margin-left: -8px;
+  //}
+  //&:before {
+  //  border-color: rgba(238, 238, 238, 0);
+  //  border-bottom-color: #dadada;
+  //  border-width: 9px;
+  //  margin-left: -12px;
+  //}
 
 
   > a {
@@ -95,7 +104,7 @@
   &.large-menu {
     width: 376px !important;
     padding: 30px;
-    top: 22px !important;
+    top: 20px !important;
     .footer {
 
       button.btn {
