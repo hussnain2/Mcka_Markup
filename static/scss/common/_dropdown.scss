@@ -39,10 +39,26 @@
     }
   }
   &.allLessons{
+    padding-left: 0;
+    padding-right: 0;
     .allCoursesList {
       max-height: 300px;
     overflow-y: auto;
+      padding-right: 30px;
+      padding-left: 30px;
+      overflow-x: visible;
+
+      >.courseRow{
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        overflow:initial;
+        .description { display: none;}
+      }
+      .bookmark{ left: -30px;}
+
       .holder {
+        overflow-x: visible;
         .data{
           padding: 10px 3px;
           &.title{
@@ -54,11 +70,6 @@
           }
         }
         .description{}
-      }
-
-      >.courseRow{
-        cursor: pointer;
-        .description { display: none;}
       }
     }
   }

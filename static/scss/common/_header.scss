@@ -366,6 +366,15 @@ header {
     font-weight: 300;
     line-height: 57px;
     margin: 0 0 15px;
+
+    .backBtn{
+      display: inline-block;
+      vertical-align: middle;
+      i{
+        font-size: inherit;
+      }
+    }
+
     @media screen and (max-width: 767px) {
       font-size: 15px;
       line-height: 24px;
