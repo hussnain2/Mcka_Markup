@@ -245,18 +245,88 @@
 
 // Social Widgets
 
-.socialWidgets{
-  .widget{
-    border-left:1px solid #ccc;
-    &:first-child{
-      border-left:0;}
+.socialWidgets {
+  margin-bottom: 90px;
+  .widget {
+    border-left: 1px solid #ccc;
+    &:first-child {
+      border-left: 0;
+    }
   }
+  .articlesArea{
+      .holder{
+        max-height: 305px;
+        overflow-y: auto;
+      }
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+          margin: 10px 0 0;
+          padding: 15px 24px 15px 17px;
+	box-sizing: border-box;
+	border: 1px solid #EBEBEB;
+	border-radius: 5px;
+	background-color: $white;
+	box-shadow: 0 2px 9px 0 rgba(0,0,0,0.03);
+          &:first-child{
+            margin: 0;
+          }
+        }
+      }
+      .articleTitle{
+	color: $secondary;
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height: 22px;
+      }
+      .label{
+        display: block;
+        margin: 10px 0 0;
+	color: #696969;
+	font-family: "Open Sans";
+	font-size: 12px;
+	line-height: 17px;
+
+      }
+    }
+    .infographicArea{}
+    .socialArea{
+      .wrapHolder{
+      }
+    }
+
+
 }
 
 
 // Media Queries
 
 @media screen and (max-width: 992px) {
+
+  .container{
+    &.courseLanding{
+      max-width: 100%;
+      .row{
+        .col{ padding: 0;}
+      }
+    }
+  }
+
+
+  .progressWidgets {
+    .widget {
+      padding: 0 15px;
+      .contenrArea{
+        width: auto;
+      }
+    .title{
+      display: none;
+    }
+    }
+  }
+
 .allCoursesList{
   .holder{
     .data{

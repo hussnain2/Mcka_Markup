@@ -2,6 +2,15 @@
 
 .inputFileWrap {
   position: relative;
+  .error{
+    color: $bg-white-red;
+    font-size: 12px;
+    margin:10px 0 0;
+    i{
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
 }
 
 .file-upload {
@@ -46,7 +55,8 @@
     input[type=file] {
       cursor: pointer;
       position: absolute;
-      height: 100%;
+      height: 42px;
+      max-width: 220px;
       width: inherit;
       top: 0;
       left: 0;
@@ -105,13 +115,15 @@
 
 .file-upload.active {
   .file-select {
-    border-color: $bg-white-green;
+    //border-color: $bg-white-green;
+    border-color: $secondary;
     transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     .file-select-button {
-      background: $bg-white-green;
+      //background: $bg-white-green;
+      background: $secondary;
       color: #FFFFFF;
       transition: all .2s ease-in-out;
       -moz-transition: all .2s ease-in-out;
