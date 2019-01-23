@@ -24,7 +24,8 @@
 .progressWidgets {
   .widget {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
+    width: 33%;
     border-left: 1px solid $hard-gray;
     padding: 0 28px;
     margin: 0 0 0 -4px;
@@ -32,18 +33,23 @@
     &:first-child {
       border: none;
       padding-left: 0;
+      >.holder{
+        display: table;
+        width: 100%;
+        .contenrArea{
+          display: table-header-group;
+        }
+        .progressArea{
+          display: table-footer-group;
+        }
+      }
     }
     &:last-child {
       padding-right: 0;
     }
 
-    .contenrArea,
-    .progressArea {
-      display: inline-block;
-      vertical-align: top;
-    }
     .contenrArea {
-      width: 236px;
+      //width: 236px;
     }
 
     .widgetTitle {
@@ -70,6 +76,7 @@
 
     // Progress Area
     .progressArea {
+      float: right;
       width: 88px;
       height: 88px;
       background: #eee;
@@ -84,6 +91,9 @@
         border-radius: inherit;
       }
     }
+
+    .contenrArea{ overflow: hidden;}
+
 
   }
 }
@@ -152,7 +162,7 @@
       }
     }
     &.locked {
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
       .description {
@@ -404,28 +414,26 @@
   }
 }
 
-
-
 // quote
 
-blockquote{
-  &.courseLanding{
-	text-align: center;
+blockquote {
+  &.courseLanding {
+    text-align: center;
     padding: 53px 50px;
 
-    p{
+    p {
       color: $gray;
-	font-size: 24px;
-            font-family: "Open Sans";
-	font-style: italic;
-	font-weight: 300;
-	line-height: 33px;
+      font-size: 24px;
+      font-family: "Open Sans";
+      font-style: italic;
+      font-weight: 300;
+      line-height: 33px;
       margin: 0 0 28px;
     }
-    .author{
-	color: $black;
-	font-size: 18px;
-	line-height: 24px;
+    .author {
+      color: $black;
+      font-size: 18px;
+      line-height: 24px;
 
     }
   }
@@ -433,6 +441,7 @@ blockquote{
 
 // Media Queries
 
+//Tablet
 @media screen and (max-width: 992px) {
 
   .container {
@@ -455,25 +464,149 @@ blockquote{
       .title {
         display: none;
       }
-    }
-  }
-
-  .allCoursesList {
-    .holder {
-      .data {
-        &.title {
-          width: calc(100% - 96px);
-        }
-        &.time,
-        &.status {
-          width: 115px;
+      .progressArea {
+        float: right;
+        &.bar {
+          margin-top: 30px;
         }
       }
     }
   }
 
+  .allCoursesList {
+    .holder {
+      padding: 16px 0;
+      .data {
+        padding: 4px 3px;
+        &.serial {
+          width: 70px;
+        }
+        &.title {
+          width: calc(100% - 96px);
+        }
+        &.time,
+        &.status {
+          width: 105px;
+          margin: 0 0 0 -3px;
+        }
+      }
+    }
+  }
+
+  .contentCard {
+    > .row {
+      margin: 0;
+    }
+  }
+
+  .socialWidgets {
+    .widget {
+      margin-top: 30px;
+      border-top: 1px solid #ccc;
+      padding: 30px 0 0;
+      &:first-child {
+        margin-top: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      > .holder {
+        border-left: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .videosWidget {
+    margin-top: 26px;
+    padding-top: 26px;
+    border-top: 1px solid #ccc;
+  }
+
 }
 
+
+//Mobile
 @media screen and (max-width: 767px) {
+
+.progressWidgets{
+  .widget{
+    padding: 0 4px;
+    border-left: 0;
+    vertical-align: bottom;
+    min-height: inherit;
+
+    .progressArea{
+      float: none;
+      display: block;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .contenrArea{
+      display: block;
+      margin: 20px 0 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:first-child{
+      >.holder{
+        display: block;
+        .progressArea{
+      float: none;
+      display: block;
+          width: 100%;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .contenrArea{
+       display: block;
+        margin-top: 20px;
+    }
+
+      }
+    }
+  }
+}
+
+
+  .contentCard {
+    padding: 20px;
+  }
+
+  .socialWidgets {
+    .widget {
+      h5 {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .allCoursesList {
+    .courseRow {
+      padding: 0 30px;
+      margin: 0 -20px;
+      .description{ left: 0;}
+    }
+    .holder {
+      .data {
+        &.serial {
+          width: 70px;
+        }
+        &.progressBar{
+          width: 142px;
+        }
+        .statusBar{ width: 103px;}
+      }
+    }
+  }
+
+  blockquote.courseLanding {
+    padding: 53px 30px;
+  }
+
+
 
 }

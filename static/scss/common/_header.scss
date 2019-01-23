@@ -147,7 +147,7 @@ header {
       font-weight: 600;
       line-height: 17px;
       margin-top: 7px;
-      &:first-child{
+      &:first-child {
         margin-top: 0;
       }
     }
@@ -161,7 +161,7 @@ header {
       border-bottom: 1px solid $light-gray;
       padding: 0 0 15px;
       margin: 0 0 15px;
-      &:first-child{
+      &:first-child {
         margin-top: 15px;
         padding-top: 15px;
         border-top: 1px solid $light-gray;
@@ -169,8 +169,6 @@ header {
     }
   }
 }
-
-
 
 // Photo edit steps in modal
 .photoEditSteps {
@@ -245,54 +243,12 @@ header {
 .courseNavWrap {
   @media screen and (max-width: 767px) {
     padding-left: 15px;
-    padding-right:15px;
+    padding-right: 15px;
   }
-  >ul {
+  > ul {
     padding: 0;
     margin: 0;
     list-style: none;
-
-    > li {
-      //display: inline-block;
-      //vertical-align: top;
-      //text-transform: uppercase;
-      //font-size: 12px;
-      //font-weight: 600;
-      //letter-spacing: 0.9px;
-      //line-height: 17px;
-      //text-align: center;
-      //margin: 0 0 0 26px;
-      ////position: relative;
-      //&:hover {
-      //  a {
-      //    outline: none;
-      //    text-decoration: none;
-      //    color: #2E2D39;
-      //  }
-      //}
-      //&.active {
-      //  a {
-      //    color: #2E2D39;
-      //    &:before {
-      //      width: 100%;
-      //      background: #2E2D39;
-      //    }
-      //  }
-      //
-      //}
-      //> a {
-      //  display: inline-block;
-      //  vertical-align: middle;
-      //  color: #2042CB;
-      //  padding: 0 0 15px;
-      //  @media screen and (max-width: 767px) {
-      //    font-size: 14px;
-      //  }
-      //}
-      //&:first-child {
-      //  margin: 0;
-      //}
-    }
   }
 }
 
@@ -345,9 +301,6 @@ header {
           }
         }
       }
-      @media screen and (max-width: 767px) {
-        font-size: 14px;
-      }
       &:first-child {
         margin: 0;
       }
@@ -367,10 +320,11 @@ header {
     line-height: 57px;
     margin: 0 0 15px;
 
-    .backBtn{
+    .backBtn {
       display: inline-block;
       vertical-align: middle;
-      i{
+      display: none;
+      i {
         font-size: inherit;
       }
     }
@@ -390,27 +344,75 @@ header {
   .pn-Advancer {
     display: none;
   }
-  @media screen and (max-width: 767px) {
-    .pn-ProductNav_Wrapper {
-      padding: 0 30px;
+
+}
+
+// BreakPoints for small Screens
+
+@media screen and (max-width: 992px) {
+
+  .courseMainHeader {
+    padding: 0 30px;
+    h1 {
+      font-size: 32px;
+      line-height: 42px;
     }
+
     .pn-Advancer {
       padding: 0 3px;
-      min-width: 30px;
+      min-width: 10px;
       text-align: center;
       display: block;
       top: -12px;
       color: $black;
       opacity: 1;
       &:active,
-      &:hover{
+      &:hover {
         color: $secondary;
+      }
+      .pn-Advancer_Icon {
+        fill: #ccc;
+        &:focus,
+        &:active,
+        &:visited {
+          fill: $secondary;
+        }
       }
     }
   }
+
+  .pn-ProductNav {
+    margin: 0 30px;
+  }
+
 }
 
-// BreakPoints for small Screens
+@media screen and (max-width: 767px) {
+
+  .courseMainHeader {
+    padding: 0 15px;
+    h1 {
+      font-size: 12px;
+      line-height: 17px;
+      padding-left: 27px;
+    position: relative;
+
+      .backBtn{
+        position: absolute;
+        display: block;
+        content: '';
+        left: 0;
+        top: -2px;
+        font-size: 22px;
+      }
+    }
+  }
+
+  .pn-ProductNav {
+    margin: 0 10px;
+  }
+}
+
 @include media-breakpoint-down(lg) {
   .courseNavWrap {
     position: relative;

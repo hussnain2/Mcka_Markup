@@ -74,20 +74,6 @@
     }
   }
 
-  //&:after {
-  //  border-color: rgba(255, 255, 255, 0);
-  //  border-bottom-color: #fff;
-  //  border-width: 8px;
-  //  margin-left: -8px;
-  //}
-  //&:before {
-  //  border-color: rgba(238, 238, 238, 0);
-  //  border-bottom-color: #dadada;
-  //  border-width: 9px;
-  //  margin-left: -12px;
-  //}
-
-
   > a {
     color: #2042CB;
     font-size: 12px;
@@ -139,5 +125,32 @@
     font-size: 16px;
     margin: 0 0 0 1px;
     vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header{
+    &.appHeader{
+      .headerNav{
+        margin-top: 18px;
+      }
+    }
+  }
+
+
+  .dropdown-menu{
+    top:30px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dropdown-menu.allLessons {
+    .allCoursesList {
+    .holder {
+      .data.title{
+        width: 108px;
+      }
+    }
+  }
   }
 }
