@@ -45,6 +45,10 @@ $tertiary          :   #0093d3;
 
 $black             :   #000000;
 $lighter-gray      :   #6F6F6F;
+
+$gray-border       :   #ebebeb;
+
+
 $gray              :   #696969;
 $hard-gray         :   #979797;
 $white             :   #ffffff;
@@ -72,19 +76,6 @@ $light-gray        :   #eeeeee;
 $bg-login-footer   :   #251F2E;
 
 // Overlay colors
-
-
-// Buttons + Forms
-//
-// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
-//$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-//$line-height-base:            1.5 !default;
-//$input-btn-padding-y:         .375rem !default;
-//$input-btn-padding-x:         30px !default;
-//$input-btn-font-size:         $font-size-base !default;
-//$input-btn-line-height:       $line-height-base !default;
-
-
 
 // Typography
 $body-font     : 14px;

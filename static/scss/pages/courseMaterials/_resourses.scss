@@ -1,0 +1,103 @@
+// Resources
+
+.contentCard {
+  &.courseResourse {
+    padding: 30px;
+  }
+}
+
+.courseResourse {
+  .head {
+    margin-bottom: 18px;
+    h2 {
+      @include heading2();
+      line-height: 43px;
+      text-transform: capitalize;
+      margin: 0;
+    }
+  }
+
+  .contentSection {
+    border-top: 1px solid $gray-border;
+    padding-top: 36px;
+    margin-top: 25px;
+    &.sectionLinks {
+      ul {
+        li {
+          margin: 3px 0 0;
+          &:first-child {
+            margin: 0;
+          }
+        }
+      }
+
+      .ico {
+        overflow: hidden;
+        i{
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    &:first-child {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sectionTitle {
+      text-transform: uppercase;
+      color: $black;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 17px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin: 0;
+      li {
+        margin: 20px 0 0;
+        .dataRow{
+          margin-top: 4px;
+          &:first-child{
+            margin: 0;
+          }
+        }
+        .dataRow > span,
+        > span {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0 7px 0 0;
+          position: relative;
+          font-size: 16px;
+          line-height: 22px;
+          &.metaData {
+            color: $gray;
+
+            font-size: 12px;
+            line-height: 17px;
+
+          }
+        }
+        .title {
+          font-size: 14px;
+          line-height: 19px;
+          text-transform: capitalize;
+          margin-bottom: 7px;
+          font-weight: normal;
+        }
+      }
+      .ico, i {
+        color: $secondary;
+        font-size: 18px;
+        line-height: 22px;
+        vertical-align: middle;
+
+      }
+      .link, a {
+        color: $secondary;
+      }
+    }
+
+  }
+}

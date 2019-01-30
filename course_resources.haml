@@ -1,0 +1,66 @@
+- extends "courses/course_navigation.haml"
+- load i18n
+
+- block current_content
+  / Opening of Course Recourse page
+  .col
+    .contentCard.courseResourse.clearfix
+      .head
+        %h2 Resources
+      .clearfix
+        %section.contentSection.sectionLinks
+          %h5.sectionTitle Jump to section
+          %ul.list-unstyled
+            %li
+              %span.ico
+                %i.material-icons subdirectory_arrow_right
+              %span.link
+                %a.firstLink{:href => "#section1"} Informational Guides
+            %li
+              %span.ico
+                %i.material-icons subdirectory_arrow_right
+              %span.link
+                %a.secondLink{:href => "#section2"} Key Takeaways, Frameworks, and Additional Practice
+        %section.contentSection#section1
+          %h5.sectionTitle INFORMATIONAL GUIDES:
+          %ul.list-unstyled
+            %li
+              %span.ico
+                %i.material-icons play_circle_filled
+              %span.link
+                %a{:href => "#"} Getting Started
+        %section.contentSection#section2
+          %h5.sectionTitle KEY TAKEAWAYS, FRAMEWORKS, AND ADDITIONAL PRACTICE:
+          %ul.list-unstyled
+            %li
+              %h5.title Course Takeaways
+              .dataRow
+                %span.ico
+                  %i.material-icons insert_drive_file
+                %span.link
+                  %a{:href => "#"} Informational Guides
+                %span.metaData (a template to record your thoughts on how you can effect change)
+            %li
+              %h5.title Lesson 4: Building Personal Resilience
+              .clearfix
+                .dataRow
+                  %span.ico
+                    %i.material-icons videocam
+                  %span.link
+                    %a{:href => "#"} Informational Guides
+                  %span.metaData (a template to record your thoughts on how you can effect change)
+                .dataRow
+                  %span.ico
+                    %i.material-icons insert_drive_file
+                  %span.link
+                    %a{:href => "#"} Informational Guides
+                  %span.metaData (a template to record your thoughts on how you can effect change)
+            %li
+              %h5.title Course Takeaways
+              .clearfix
+                .dataRow
+                  %span.ico
+                    %i.material-icons insert_drive_file
+                  %span.link
+                    %a{:href => "#"} Informational Guides
+                  %span.metaData (a template to record your thoughts on how you can effect change)

@@ -1,0 +1,150 @@
+// Course Overview Styles
+
+.contentCard {
+  &.courseOverview {
+    padding: 30px;
+  }
+}
+
+.courseOverview {
+  .descriptionWrap {
+    margin-bottom: 25px;
+    .head {
+      margin-bottom: 12px;
+      h2 {
+        @include heading2();
+        line-height: 43px;
+        color: $black;
+        margin-bottom: 20px;
+      }
+      .title {
+        font-size: 12px;
+        line-height: 17px;
+        color: $black;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 20px 0 0;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+  .sectionsWrap {
+    .section {
+      margin-top: 30px;
+      padding-top: 36px;
+      border-top: 1px solid $border-color;
+      &:first-child {
+        margin-top: 0;
+      }
+      h5 {
+        font-size: 12px;
+        line-height: 17px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+      }
+    }
+  }
+  .textImageWrap {
+    overflow: hidden;
+    .imgWrap {
+      float: left;
+      overflow: hidden;
+      width: 28.5%;
+      margin-right: 45px;
+      img {
+        width: 100%;
+      }
+    }
+    .textWrap {
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: normal;
+      padding: 5px 0;
+      .head {
+        margin-bottom: 30px;
+        p, div, strong, b, h1, h2, h3, h4, h5 {
+          overflow: hidden;
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: normal;
+          margin: 0;
+        }
+      }
+    }
+    ul {
+      margin: 0;
+      list-style: none;
+      padding: 0 0 0 19px;
+      list-style: disc;
+      li {
+
+        margin-top: 5px;
+        &:first-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .facultyWrap {
+    .faculty {
+      margin: 0 0 35px;
+      padding: 0;
+      list-style: none;
+      li {
+        width: 180px;
+        height: auto;
+        margin-left: 20px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        &:hover {
+          cursor: pointer;
+        }
+        &.active {
+          &:before {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            display: block;
+            width: 20px;
+            height: 35px;
+            content: '';
+            background: url("../img/bookmark.svg") no-repeat;
+            background-size: contain;
+
+          }
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .facultyInfo {
+      font-size: 16px;
+      line-height: 22px;
+      h5, .title {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        text-transform: none;
+      }
+    }
+  }
+
+}
+
