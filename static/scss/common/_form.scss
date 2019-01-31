@@ -54,7 +54,7 @@ form {
     transition: transform 150ms ease-out, font-size 150ms ease-out;
   }
   .focused .form-label {
-    transform: translate(0px, -21px);
+    transform: translate(0px, -18px);
     font-size: .85em;
     color: $secondary;
   }

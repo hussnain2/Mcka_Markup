@@ -12,64 +12,67 @@
   left: 20px !important;
 
   &:after {
-     position: absolute;
-     top:-9px;
-     right: 17px;
-     content: "";
-     width: 20px;
-     height: 10px;
-     background: url("../img/dropdown-arrow.png") no-repeat;
-     display: block;
+    position: absolute;
+    top: -9px;
+    right: 17px;
+    content: "";
+    width: 20px;
+    height: 10px;
+    background: url("../image/dropdown-arrow.png") no-repeat;
+    display: block;
   }
 
-
-
-  &.profile-area{
+  &.profile-area {
     &:after,
-    &:before{
+    &:before {
       right: 30px;
     }
   }
 
-  &.dropdown-menu-left{
+  &.dropdown-menu-left {
     left: 20px !important;
     &:after, &:before {
       right: auto;
       left: 9%;
     }
   }
-  &.allLessons{
+  &.allLessons {
     padding-left: 0;
     padding-right: 0;
     .allCoursesList {
-      max-height: 300px;
-    overflow-y: auto;
+      max-height: 370px;
+      overflow-y: auto;
       padding-right: 30px;
       padding-left: 30px;
       overflow-x: visible;
 
-      >.courseRow{
+      > .courseRow {
         cursor: pointer;
         padding: 0;
         margin: 0;
-        overflow:initial;
-        .description { display: none;}
+        overflow: initial;
+        .description {
+          display: none;
+        }
       }
-      .bookmark{ left: -30px;}
+      .bookmark {
+        left: -31px;
+      }
 
       .holder {
         overflow-x: visible;
-        .data{
-          padding: 10px 3px;
-          &.title{
+        .data {
+          padding: 7px 3px;
+          &.title {
             width: 164px;
             font-size: 12px;
           }
-          &.status{
+          &.status {
             width: auto;
           }
         }
-        .description{}
+        .description {
+        }
       }
     }
   }
@@ -105,12 +108,12 @@
     top: 20px !important;
     .footer {
 
-      button.btn {
+      a.btn {
         width: 100%;
       }
     }
   }
-  &.middle-menu{
+  &.middle-menu {
     min-width: 337px !important;
   }
 }
@@ -129,28 +132,46 @@
 }
 
 @media screen and (max-width: 992px) {
-  header{
-    &.appHeader{
-      .headerNav{
+  header {
+    &.appHeader {
+      .headerNav {
         margin-top: 18px;
       }
     }
   }
 
-
-  .dropdown-menu{
-    top:30px !important;
+  .dropdown-menu {
+    top: 24px !important;
   }
 }
 
 @media screen and (max-width: 992px) {
   .dropdown-menu.allLessons {
     .allCoursesList {
-    .holder {
-      .data.title{
-        width: 108px;
+      .holder {
+        .data.title {
+          width: 108px;
+        }
       }
     }
   }
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown-menu {
+    &.dropdown-menu-left {
+      &:after,
+      &:after {
+        left: 50%;
+        margin: 0 0 0 -10px;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    &.allLessons {
+      width: calc(100% - 40px);
+      left: 20px !important;
+    }
   }
 }
